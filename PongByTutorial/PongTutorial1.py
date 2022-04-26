@@ -13,7 +13,7 @@ This has only been tested on Linux.
 Every effort should be made to make it clear what you need to change so that this runs on your system, so let me know of any problems in the comments!
 """
 
-# Cross-Platforming the Sounds
+# Cross-Platforming the Sounds - @BilalsGituation's idea to have system check be automated
 def WallSound():
     if platform.system() == "Linux":
         os.system("aplay 331381__qubodup__public-domain-jump-sound.wav&") # Linux
