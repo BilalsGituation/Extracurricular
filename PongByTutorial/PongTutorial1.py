@@ -1,7 +1,9 @@
 import turtle
 import random
+import platform
 import os # Linux and Mac
-# import winsound # Windows
+#import winsound # Windows - Comment out or install yourself if not applicable
+# So.. this game can either be compatible for Mac&Linux OR Windows at present.
 
 """
 This game was made using a tutorial by @TokyoEdtech as part of a free YouTube series by freecodecamp.org.
@@ -11,12 +13,44 @@ This has only been tested on Linux.
 Every effort should be made to make it clear what you need to change so that this runs on your system, so let me know of any problems in the comments!
 """
 
+# Cross-Platforming the Sounds
+def WallSound():
+    if platform.system() == "Linux":
+        os.system("aplay 331381__qubodup__public-domain-jump-sound.wav&") # Linux
+    elif platform.system() == "Darwin":
+        os.system("afplay 331381__qubodup__public-domain-jump-sound.wav&") # Mac
+    elif platform.system() == "Windows":
+        winsound.PlaySound("31381__qubodup__public-domain-jump-sound.wav", winsound.SND_ASYNC)
+    else:
+        turtle.bye()
+
+def PadSound():
+    if platform.system() == "Linux":
+        os.system("aplay 30252__voktebef__p.wav&") # Linux
+    elif platform.system() == "Darwin":
+        os.system("afplay 30252__voktebef__p.wav&") # Mac
+    elif platform.system() == "Windows":
+        winsound.PlaySound("30252__voktebef__p.wav", winsound.SND_ASYNC)
+    else:
+        turtle.bye()
+
+def GoalSound():
+    if platform.system() == "Linux":
+        os.system("aplay 135512__chriddof__little-guy-sings.wav&") # Linux
+    elif platform.system() == "Darwin":
+        os.system("afplay 135512__chriddof__little-guy-sings.wav&") # Mac
+    elif platform.system() == "Windows":
+        winsound.PlaySound("afplay 135512__chriddof__little-guy-sings.wav", winsound.SND_ASYNC)
+    else:
+        turtle.bye()
+
 # Window
 wn = turtle.Screen()
 wn.title("Bill's Pongy Game") # It will be your game once you change stuff
 wn.bgcolor("grey14")
 wn.setup(width=800, height=600)
 wn.tracer(0)
+
 
 # Player left
 leftpad = turtle.Turtle()
@@ -44,7 +78,7 @@ ball.color("grey76")
 ball.penup()
 ball.goto(0,0)
 ball.dx = 0.2 #dx and dy values must be calibrated to one's own computer
-ball.dy = -0.2
+ball.dy = 0.2
 
 # Game scoring
 score_1 = 0
@@ -97,26 +131,20 @@ while True:
     if ball.ycor() > 290:
         ball.sety(290)
         ball.dy = 0 - ball.dy
-        os.system("aplay 331381__qubodup__public-domain-jump-sound.wav&") # Linux
-#        os.system("afplay 331381__qubodup__public-domain-jump-sound.wav&") # Mac
-#       winsound.PlaySound("31381__qubodup__public-domain-jump-sound.wav, winsound.SND_ASYNC) # Windows
+        WallSound()
 
     if ball.ycor() < -290:
         ball.sety(-290)
         ball.dy *= -1
-        os.system("aplay 331381__qubodup__public-domain-jump-sound.wav&") # Linux
-#        os.system("afplay 331381__qubodup__public-domain-jump-sound.wav&") # Mac
-#       winsound.PlaySound("31381__qubodup__public-domain-jump-sound.wav, winsound.SND_ASYNC) # Windows
+        WallSound()
 
-
+    # Goal Responses
     if ball.xcor() > 390:
         ball.goto(0,0)
         ball.dx = random.uniform(-0.4,-0.4) # these random floats for movement speed were not in the tutorial
         ball.dy = random.uniform(-0.4,0.4)
         score_1 += 1
-        os.system("aplay 135512__chriddof__little-guy-sings.wav&") # Linux
-#        os.system("afplay 135512__chriddof__little-guy-sings.wav&") # Mac
-#       winsound.PlaySound("135512__chriddof__little-guy-sings.wav, winsound.SND_ASYNC) # Windows
+        GoalSound()
         pen.clear()
         pen.write("Player 1: {}          Player 2: {}".format(score_1, score_2), align="center", font=("courier 10 pitch", 24, "normal"))
 
@@ -125,9 +153,7 @@ while True:
         ball.dx = random.uniform(-0.4,0.4)
         ball.dy = random.uniform(-0.4,0.4)
         score_2 += 1
-        os.system("aplay 135512__chriddof__little-guy-sings.wav&") # Linux
-#        os.system("afplay 135512__chriddof__little-guy-sings.wav&") # Mac
-#       winsound.PlaySound("135512__chriddof__little-guy-sings.wav, winsound.SND_ASYNC) # Windows
+        GoalSound()
         pen.clear()
         pen.write("Player 1: {}          Player 2: {}".format(score_1, score_2), align="center", font=("courier 10 pitch", 24, "normal"))
 
@@ -135,13 +161,9 @@ while True:
     if ball.xcor() > 340 and ball.xcor() < 350 and (ball.ycor() < rightpad.ycor() + 40 and ball.ycor() > rightpad.ycor() -40):
         ball.setx(340)
         ball.dx *= -1
-        os.system("aplay 30252__voktebef__p.wav&") # Linux
-#        os.system("afplay 30252__voktebef__p.wav&") # Mac
-#       winsound.PlaySound("aplay 30252__voktebef__p.wav, winsound.SND_ASYNC) # Windows
+        PadSound()
 
     if ball.xcor() < -340 and ball.xcor() > -350 and (ball.ycor() < leftpad.ycor() + 40 and ball.ycor() > leftpad.ycor() -40):
         ball.setx(-340)
         ball.dx *= -1
-        os.system("aplay 30252__voktebef__p.wav&") # Linux
-#        os.system("afplay 30252__voktebef__p.wav&") # Mac
-#       winsound.PlaySound("30252__voktebef__p.wav, winsound.SND_ASYNC) # Windows
+        PadSound()
