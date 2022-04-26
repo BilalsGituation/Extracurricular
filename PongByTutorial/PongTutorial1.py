@@ -94,16 +94,16 @@ while True:
     if ball.ycor() > 290:
         ball.sety(290)
         ball.dy = 0 - ball.dy
-        os.system("aplay 331381__qubodup__public-domain-jump-sound.wav") # Linux
-#        os.system("aplay 331381__qubodup__public-domain-jump-sound.wav") # Mac
-#       winsound.PlaySound("31381__qubodup__public-domain-jump-sound.wav", winsound.SND_ASYNC) # Windows
+        os.system("aplay 331381__qubodup__public-domain-jump-sound.wav&") # Linux
+#        os.system("afplay 331381__qubodup__public-domain-jump-sound.wav&") # Mac
+#       winsound.PlaySound("31381__qubodup__public-domain-jump-sound.wav&", winsound.SND_ASYNC) # Windows
 
     if ball.ycor() < -290:
         ball.sety(-290)
         ball.dy *= -1
-        os.system("aplay 331381__qubodup__public-domain-jump-sound.wav") # Linux
-#        os.system("aplay 331381__qubodup__public-domain-jump-sound.wav") # Mac
-#       winsound.PlaySound("31381__qubodup__public-domain-jump-sound.wav", winsound.SND_ASYNC) # Windows
+        os.system("aplay 331381__qubodup__public-domain-jump-sound.wav&") # Linux
+#        os.system("afplay 331381__qubodup__public-domain-jump-sound.wav&") # Mac
+#       winsound.PlaySound("31381__qubodup__public-domain-jump-sound.wav&", winsound.SND_ASYNC) # Windows
 
 
     if ball.xcor() > 390:
@@ -111,9 +111,9 @@ while True:
         ball.dx = random.uniform(-0.4,-0.4) # these random floats for movement speed were not in the tutorial
         ball.dy = random.uniform(-0.4,0.4)
         score_1 += 1
-        os.system("aplay 135512__chriddof__little-guy-sings.wav") # Linux
-#        os.system("aplay 135512__chriddof__little-guy-sings.wav") # Mac
-#       winsound.PlaySound("135512__chriddof__little-guy-sings.wav", winsound.SND_ASYNC) # Windows
+        os.system("aplay 135512__chriddof__little-guy-sings.wav&") # Linux
+#        os.system("afplay 135512__chriddof__little-guy-sings.wav&") # Mac
+#       winsound.PlaySound("135512__chriddof__little-guy-sings.wav&", winsound.SND_ASYNC) # Windows
         pen.clear()
         pen.write("Player 1: {}          Player 2: {}".format(score_1, score_2), align="center", font=("courier 10 pitch", 24, "normal"))
 
@@ -122,9 +122,9 @@ while True:
         ball.dx = random.uniform(-0.4,0.4)
         ball.dy = random.uniform(-0.4,0.4)
         score_2 += 1
-        os.system("aplay 135512__chriddof__little-guy-sings.wav") # Linux
-#        os.system("aplay 135512__chriddof__little-guy-sings.wav") # Mac
-#       winsound.PlaySound("135512__chriddof__little-guy-sings.wav", winsound.SND_ASYNC) # Windows
+        os.system("aplay 135512__chriddof__little-guy-sings.wav&") # Linux
+#        os.system("afplay 135512__chriddof__little-guy-sings.wav&") # Mac
+#       winsound.PlaySound("135512__chriddof__little-guy-sings.wav&", winsound.SND_ASYNC) # Windows
         pen.clear()
         pen.write("Player 1: {}          Player 2: {}".format(score_1, score_2), align="center", font=("courier 10 pitch", 24, "normal"))
 
@@ -132,13 +132,13 @@ while True:
     if ball.xcor() > 340 and ball.xcor() < 350 and (ball.ycor() < rightpad.ycor() + 40 and ball.ycor() > rightpad.ycor() -40):
         ball.setx(340)
         ball.dx *= -1
-        os.system("aplay 30252__voktebef__p.wav") # Linux
-#        os.system("aplay aplay 30252__voktebef__p.wav") # Mac
-#       winsound.PlaySound("aplay 30252__voktebef__p.wav", winsound.SND_ASYNC) # Windows
+        os.system("aplay 30252__voktebef__p.wav&") # Linux
+#        os.system("afplay 30252__voktebef__p.wav&") # Mac
+#       winsound.PlaySound("aplay 30252__voktebef__p.wav&", winsound.SND_ASYNC) # Windows
 
     if ball.xcor() < -340 and ball.xcor() > -350 and (ball.ycor() < leftpad.ycor() + 40 and ball.ycor() > leftpad.ycor() -40):
         ball.setx(-340)
         ball.dx *= -1
-        os.system("aplay 30252__voktebef__p.wav") # Linux
-#        os.system("aplay 30252__voktebef__p.wav") # Mac
-#       winsound.PlaySound("aplay 30252__voktebef__p.wav", winsound.SND_ASYNC) # Windows
+        os.system("aplay 30252__voktebef__p.wav&") # Linux
+#        os.system("afplay 30252__voktebef__p.wav&") # Mac
+#       winsound.PlaySound("30252__voktebef__p.wav&", winsound.SND_ASYNC) # Windows
