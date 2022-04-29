@@ -1,45 +1,57 @@
-import turtle
+import turtle # General Python packages required
 import random
 import platform
-import os # Linux and Mac
-#import winsound # Windows - Comment out or install yourself if not applicable
-# So.. this game can either be compatible for Mac&Linux OR Windows at present.
+# Line 5 condition checks user system because sound must be accessed by cmd line
+if platform.system() == "Linux":
+    import os
+    plat = "Linux"
+elif platform.system() == "Darwin":
+    import os # Linux and Mac
+    plat = "Mac"
+elif platform.system() == "Windows":
+    import winsound # Windows
+    plat = "Windows"
 
 """
+CONTROLS:
+Player 1: W = Up, S = Down. Player 2: Up Arrow = Up, Down Arrow = Down
+Change colour of FG objects = F, Change colour of BG objects = B.
+
 This game was made using a tutorial by @TokyoEdtech as part of a free YouTube series by freecodecamp.org.
 The sounds required for this game are included in the GitHub repository.
 This has only been tested on Linux.
 
-Every effort should be made to make it clear what you need to change so that this runs on your system, so let me know of any problems in the comments!
+Every effort should be made to make it clear what you need to change so that
+this runs on your system, so let me know of any problems in the comments!
 """
 
 # Cross-Platforming the Sounds - @BilalsGituation's idea to have system check be automated
 def WallSound():
-    if platform.system() == "Linux":
+    if plat == "Linux":
         os.system("aplay 331381__qubodup__public-domain-jump-sound.wav&") # Linux
-    elif platform.system() == "Darwin":
+    elif plat == "Mac":
         os.system("afplay 331381__qubodup__public-domain-jump-sound.wav&") # Mac
-    elif platform.system() == "Windows":
+    elif plat == "Windows":
         winsound.PlaySound("31381__qubodup__public-domain-jump-sound.wav", winsound.SND_ASYNC)
     else:
         turtle.bye()
 
 def PadSound():
-    if platform.system() == "Linux":
+    if plat == "Linux":
         os.system("aplay 30252__voktebef__p.wav&") # Linux
-    elif platform.system() == "Darwin":
+    elif plat == "Mac":
         os.system("afplay 30252__voktebef__p.wav&") # Mac
-    elif platform.system() == "Windows":
+    elif plat == "Windows":
         winsound.PlaySound("30252__voktebef__p.wav", winsound.SND_ASYNC)
     else:
         turtle.bye()
 
 def GoalSound():
-    if platform.system() == "Linux":
+    if plat == "Linux":
         os.system("aplay 135512__chriddof__little-guy-sings.wav&") # Linux
-    elif platform.system() == "Darwin":
+    elif plat == "Mac":
         os.system("afplay 135512__chriddof__little-guy-sings.wav&") # Mac
-    elif platform.system() == "Windows":
+    elif plat == "Windows":
         winsound.PlaySound("afplay 135512__chriddof__little-guy-sings.wav", winsound.SND_ASYNC)
     else:
         turtle.bye()
@@ -77,8 +89,8 @@ ball.shape("square")
 ball.color("grey76")
 ball.penup()
 ball.goto(0,0)
-ball.dx = 0.2 #dx and dy values must be calibrated to one's own computer
-ball.dy = 0.2
+ball.dx = 0.42 #dx and dy values must be calibrated to one's own computer
+ball.dy = 0.42
 
 # Game scoring
 score_1 = 0
@@ -114,12 +126,27 @@ def right_down():
     y-=20
     rightpad.sety(y)
 
+# User can set colours
+
+def RndFGColour():
+    pen.clear()
+    pen.color("#"+("%06x"%random.randint(0,16777215)))
+    pen.write("Player 1: 0          Player 2: 0".format(score_1, score_2), align="center", font=("courier 10 pitch", 24, "normal"))
+    ball.color("#"+("%06x"%random.randint(0,16777215)))
+    leftpad.color("#"+("%06x"%random.randint(0,16777215)))
+    rightpad.color("#"+("%06x"%random.randint(0,16777215)))
+
+def RndBGColour():
+    wn.bgcolor("#"+("%06x"%random.randint(0,16777215)))
+
 # Keyboard binding
 wn.listen()
-wn.onkeypress(left_up, "w")
-wn.onkeypress(left_down, "s")
-wn.onkeypress(right_up, "Up")
-wn.onkeypress(right_down, "Down")
+wn.onkeypress(left_up, "w") # W key moves Player 1 up
+wn.onkeypress(left_down, "s") # S key moves Player 1 down
+wn.onkeypress(right_up, "Up") # Up key moves Player 2 up
+wn.onkeypress(right_down, "Down") # Down key moves Player 2 down
+wn.onkeypress(RndFGColour, "f") # F key changes colour of each foreground object to random
+wn.onkeypress(RndBGColour, "b") # B key changes colour of background to random
 
 # Main loop
 while True:
@@ -167,3 +194,16 @@ while True:
         ball.setx(-340)
         ball.dx *= -1
         PadSound()
+
+    # Border the paddles in
+    if leftpad.ycor() > 250:
+        leftpad.sety(250)
+
+    if leftpad.ycor() < -250:
+        leftpad.sety(-250)
+
+    if rightpad.ycor() > 250:
+        rightpad.sety(250)
+
+    if rightpad.ycor() < -250:
+        rightpad.sety(-250)
