@@ -131,7 +131,7 @@ def right_down():
 def RndFGColour():
     pen.clear()
     pen.color("#"+("%06x"%random.randint(0,16777215)))
-    pen.write("Player 1: 0          Player 2: 0".format(score_1, score_2), align="center", font=("courier 10 pitch", 24, "normal"))
+    pen.write(f"Player 1: {score_1}          Player 2: {score_2}", align="center", font=("courier 10 pitch", 24, "normal"))
     ball.color("#"+("%06x"%random.randint(0,16777215)))
     leftpad.color("#"+("%06x"%random.randint(0,16777215)))
     rightpad.color("#"+("%06x"%random.randint(0,16777215)))
