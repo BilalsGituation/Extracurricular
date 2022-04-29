@@ -32,7 +32,7 @@ def WallSound():
     elif plat == "Mac":
         os.system("afplay 331381__qubodup__public-domain-jump-sound.wav&") # Mac
     elif plat == "Windows":
-        winsound.PlaySound("31381__qubodup__public-domain-jump-sound.wav", winsound.SND_ASYNC)
+        winsound.PlaySound("331381__qubodup__public-domain-jump-sound.wav", winsound.SND_ASYNC)
     else:
         turtle.bye()
 
@@ -52,9 +52,16 @@ def GoalSound():
     elif plat == "Mac":
         os.system("afplay 135512__chriddof__little-guy-sings.wav&") # Mac
     elif plat == "Windows":
-        winsound.PlaySound("afplay 135512__chriddof__little-guy-sings.wav", winsound.SND_ASYNC)
+        winsound.PlaySound("135512__chriddof__little-guy-sings.wav", winsound.SND_ASYNC)
     else:
         turtle.bye()
+
+def ScoreFont():
+    if plat == "Windows":
+        pen.write(f"Player 1: {score_1}          Player 2: {score_2}", align="center", font=("Courier New", 24, "normal"))
+    else:
+        pen.write(f"Player 1: {score_1}          Player 2: {score_2}", align="center", font=("courier 10 pitch", 24, "normal"))
+
 
 # Window
 wn = turtle.Screen()
@@ -89,8 +96,8 @@ ball.shape("square")
 ball.color("grey76")
 ball.penup()
 ball.goto(0,0)
-ball.dx = 0.42 #dx and dy values must be calibrated to one's own computer
-ball.dy = 0.42
+ball.dx = 0.3 #dx and dy values must be calibrated to one's own computer
+ball.dy = 0.3
 
 # Game scoring
 score_1 = 0
@@ -103,7 +110,7 @@ pen.color("white")
 pen.penup()
 pen.hideturtle()
 pen.goto(0,260)
-pen.write("Player 1: 0          Player 2: 0".format(score_1, score_2), align="center", font=("courier 10 pitch", 24, "normal"))
+ScoreFont()
 
 # Paddle function -
 def left_up():
@@ -131,7 +138,7 @@ def right_down():
 def RndFGColour():
     pen.clear()
     pen.color("#"+("%06x"%random.randint(0,16777215)))
-    pen.write(f"Player 1: {score_1}          Player 2: {score_2}", align="center", font=("courier 10 pitch", 24, "normal"))
+    ScoreFont()
     ball.color("#"+("%06x"%random.randint(0,16777215)))
     leftpad.color("#"+("%06x"%random.randint(0,16777215)))
     rightpad.color("#"+("%06x"%random.randint(0,16777215)))
@@ -171,18 +178,18 @@ while True:
         ball.dx = random.uniform(-0.4,-0.4) # these random floats for movement speed were not in the tutorial
         ball.dy = random.uniform(-0.4,0.4)
         score_1 += 1
-        GoalSound()
         pen.clear()
-        pen.write("Player 1: {}          Player 2: {}".format(score_1, score_2), align="center", font=("courier 10 pitch", 24, "normal"))
+        GoalSound()
+        ScoreFont()
 
     if ball.xcor() < -390:
         ball.goto(0,0)
         ball.dx = random.uniform(-0.4,0.4)
         ball.dy = random.uniform(-0.4,0.4)
         score_2 += 1
-        GoalSound()
         pen.clear()
-        pen.write("Player 1: {}          Player 2: {}".format(score_1, score_2), align="center", font=("courier 10 pitch", 24, "normal"))
+        GoalSound()
+        ScoreFont()
 
     # Collision responses between player character and non-player character
     if ball.xcor() > 340 and ball.xcor() < 350 and (ball.ycor() < rightpad.ycor() + 40 and ball.ycor() > rightpad.ycor() -40):
