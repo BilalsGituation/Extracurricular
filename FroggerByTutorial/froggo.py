@@ -3,12 +3,21 @@ import math
 
 '''
 Context: I made Pong using @TokyoEdtech's tutorial on YouTube and am checking out
-his other game tutorials
+his other game tutorials. Found livestream tutorial playlist where he makes Frogger
+
+Tutorial:
+YouTube: https://www.youtube.com/watch?v=CDM4U5A7BX8&list=PLlEgNdBJEO-lR6IChlbqU1E00vpN3GBM6
+
+Imageset or script if that's how you learn:
+GitHub: https://github.com/wynand1004/Projects/tree/master/Frogger
 
 
 Day 1 finish commentary (03.05.2022):
 revised: movement functions and keybinding, turtle window/mainloop,
 learned: using images, class inheritance, pulling gifs from the pwd, new kind of collision
+Morning after: car should be down by where road will be, like in video. Made placeholders
+for other aspects of game to get thinking about concepts
+
 '''
 
 # Window
@@ -44,10 +53,8 @@ pen.speed(0)
 pen.hideturtle()
 
 
-#Making classes
+#Making classes (removed docstring, won't pretend I remember what it does)
 class Sprite():
-    """docstring for Sprite."""
-
     def __init__(self, x, y, width, height, image):
         self.x = x
         self.y=y
@@ -79,6 +86,8 @@ class Player(Sprite):
         self.y -= 40
     def frog_right(self):
         self.x += 40
+# somehow the player needs to get to the goal. Either function here or new child
+
 
 
 class Car(Sprite):
@@ -95,6 +104,50 @@ class Car(Sprite):
         if self.x > 400:
             self.x=-400
 
+# Morning after Day 1:
+# Saving myself typing along with the tutorial:
+# Predicting the other classes
+
+# Log is a platform to stand on in river area
+# so I will want to somehow invert the collision function so floor sends you back
+# and log allows continuation
+
+class Log(Sprite):
+
+    def __init__(self, x, y, width, height, image, dx):
+        Sprite.__init__(self, x, y, width, height, image)
+        self.dx = dx
+
+    def update(self):
+        self.x += self.dx
+        #Border checking
+        if self.x < -400:
+            self.x=400
+        if self.x > 400:
+            self.x=-400
+
+# Turts (turtles) is non-player object like logs, not cars, where collisions
+# reset the frog
+# EXCEPT the turtles (all? no, from the imageset?) sink when you stay on them
+# for too long.. I think, based on there being a "turtle_submerged.gif" file in
+# the GitHub repository accompanying the tutorial
+
+class Turts(Sprite):
+
+    def __init__(self, x, y, width, height, image, dx):
+        Sprite.__init__(self, x, y, width, height, image)
+        self.dx = dx
+
+    def update(self):
+        self.x += self.dx
+        #Border checking
+        if self.x < -400:
+            self.x=400
+        if self.x > 400:
+            self.x=-400
+
+# Actually the home might more likely be another child of Sprite
+
 
 
 #Making Objects
@@ -103,6 +156,16 @@ Player.render(pen)
 
 car_left = Car(0,-255,121,40,"car_left.gif", -0.15)
 car_right = Car(0,255,121,40,"car_right.gif", 0.15)
+
+# Space to Make logs
+
+
+
+# Space to Make turts
+
+# Make home
+
+
 
 # Key binds
 wn.listen()
@@ -115,6 +178,7 @@ wn.onkeypress(Player.frog_left, "Left")
 wn.onkeypress(Player.frog_down, "Down")
 wn.onkeypress(Player.frog_right, "Right")
 
+# mainloop properties
 while True:
     #render
     Player.render(pen)
@@ -133,6 +197,8 @@ while True:
     turtle_left_half.update()
     turtle_submerged.update()'''
 
+
+    #Call functions you built in
     #Check for collisions
     if Player.is_collision(car_left):
         Player.x=0
@@ -142,7 +208,12 @@ while True:
         Player.x=0
         Player.y=-300
 
+    # Behaviour of objects that save the frog from drowning
+    # and the function of the frog getting in the goal
 
+
+
+#mainloop
     wn.update()
     #clear frog
     pen.clear()
