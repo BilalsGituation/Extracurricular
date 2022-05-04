@@ -20,7 +20,7 @@ for other aspects of game to get thinking about concepts
 
 '''
 
-# Window
+# Window 
 wn = turtle.Screen()
 wn.setup(600,800)
 wn.cv._rootwindow.resizable(False,False)
