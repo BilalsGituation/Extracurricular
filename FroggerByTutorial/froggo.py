@@ -189,13 +189,13 @@ wn.onkeypress(Player.frog_right, "Right")
 # mainloop properties
 while True:
     #render
-    # Placeholder/guess: "for sprite: sprite.render(pen)"
+    # Placeholder/guess: "for shape in shapes: shape.render(pen)"
     Player.render(pen)
     car_left.render(pen)
     car_right.render(pen)
 
     # Update objects and Screen
-    # Placeholder/guess: "for sprite: sprite.render(pen)"
+    # Placeholder/guess: "for sprite in sprites: sprite.update()"
     # Maybe I can design it that way, maybe it's inefficient. Maybe it's better as a sprite function, as it is looking like on the GitHub for the tutorial
     car_left.update()
     car_right.update()
