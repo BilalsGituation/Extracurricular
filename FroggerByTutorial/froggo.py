@@ -20,7 +20,7 @@ for other aspects of game to get thinking about concepts
 
 '''
 
-# Window 
+# Window
 wn = turtle.Screen()
 wn.setup(600,800)
 wn.cv._rootwindow.resizable(False,False)
@@ -30,7 +30,15 @@ wn.tracer(0)
 
 #register our shapes
 # I would do this with all the shapes first? Maybe it makes tutorial narrative weird
-wn.register_shape("frog.gif")
+# 11.05.2022 (May ofc) I went on the github script of this game and had a facepalm moment when I saw this was done by a "for" loop. That's why I practice!
+# Of course I just copy-pasted the list of shapes from the GitHub, I had already individually copied them in
+
+# register shapes in wn
+shapes = ["frog.gif", "car_left.gif", "car_right.gif", "log_full.gif", "turtle_left.gif", "turtle_right.gif", "turtle_right_half.gif",
+    "turtle_left_half.gif", "turtle_submerged.gif", "home.gif", "frog_home.gif", "frog_small.gif"]
+for shape in shapes:
+    wn.register_shape(shape)
+'''
 wn.register_shape("background.gif")
 wn.register_shape("car_left.gif")
 wn.register_shape("car_right.gif")
@@ -45,7 +53,7 @@ wn.register_shape("turtle_left_half.gif")
 wn.register_shape("turtle_right.gif")
 wn.register_shape("turtle_right_half.gif")
 wn.register_shape("turtle_submerged.gif")
-
+'''
 
 #Pen
 pen = turtle.Turtle()
@@ -181,11 +189,14 @@ wn.onkeypress(Player.frog_right, "Right")
 # mainloop properties
 while True:
     #render
+    # Placeholder/guess: "for sprite: sprite.render(pen)"
     Player.render(pen)
     car_left.render(pen)
     car_right.render(pen)
 
     # Update objects and Screen
+    # Placeholder/guess: "for sprite: sprite.render(pen)"
+    # Maybe I can design it that way, maybe it's inefficient. Maybe it's better as a sprite function, as it is looking like on the GitHub for the tutorial
     car_left.update()
     car_right.update()
     '''log_full.update()
