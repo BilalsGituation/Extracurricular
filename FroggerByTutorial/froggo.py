@@ -233,9 +233,11 @@ while True:
         Player.x = 0
         Player.y =-300
 
-    if Player.is_collision(log_left):
-        Player.dx = log_left.dx
-    
+    if Player.is_collision(log_left): # Experiment note:
+        Player.dx = log_left.dx #       DO NOT just replace if with while to see whether that fixes the dx problem!
+        #                               becas# the cars will disappear, the game will freeze and only a keyboard interrupt
+        #                               could close it!
+
 
     if Player.is_collision(log_right):
         Player.dx = log_right.dx
