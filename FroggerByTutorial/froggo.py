@@ -87,6 +87,7 @@ class Player(Sprite):
 
     def __init__(self, x, y, width, height, image):
         Sprite.__init__(self, x, y, width, height, image)
+        self.dx = 0
 
     def frog_up(self):
         self.y += 40
@@ -96,6 +97,8 @@ class Player(Sprite):
         self.y -= 40
     def frog_right(self):
         self.x += 40
+    def update(self):
+        self.x += self.dx
 # somehow the player needs to get to the goal. Either function here or new child
 
 
@@ -166,17 +169,17 @@ Player=Player(0,-300, 40, 40, "frog.gif")
 #Player.render(pen) #not sure why this was duplicated?
 
 car_left = Car(0,-255,121,40,"car_left.gif", -0.15)
-car_right = Car(0,255,121,40,"car_right.gif", 0.15)
-log_left = Log(0,-255,121,40,"log_full.gif", -0.25)
-log_right = Log(0,255,121,40,"log_full.gif", 0.25)
+car_right = Car(0,-175,121,40,"car_right.gif", 0.15)
+log_left = Log(0,135,121,40,"log_full.gif", -0.25)
+log_right = Log(0,180,121,40,"log_full.gif", 0.25)
 
 movements = []
-#movements.append(Player)
 movements.append(car_left)
 movements.append(car_right)
 movements.append(log_left)
 movements.append(log_right)
-
+# Player is updated and rendered last
+movements.append(Player)
 
 # Space to Make logs
 
@@ -203,31 +206,21 @@ wn.onkeypress(Player.frog_right, "Right")
 while True:
     #render
     # Placeholder/guess: "for shape in shapes: shape.render(pen)"
-    '''Player.render(pen)
-    car_left.render(pen)
-    car_right.render(pen)
-    log_left.render(pen)
-    log_right.render(pen)'''
+
     # Trying to be original and neater here, just leaving the mess for this commit at least, so it's not a copy-pasted version of the game
-    Player.render(pen)
+    #Player.render(pen) # he's right in the video that we will want the frog to be drawn on top of the log
+    # update: that's great. since the loop goes fast enough in a collision with a car
+    # update: I really did clean these up by guessing, not because I was eventually told to by the vid
     for object in movements:
         object.render(pen)
+    #Player.render(pen)
 
     # Update objects and Screen
     # Placeholder/guess: "for sprite in sprites: sprite.update()"
     # Maybe I can design it that way, maybe it's inefficient. Maybe it's better as a sprite function, as it is looking like on the GitHub for the tutorial
     for shape in movements:
         shape.update() # Update: my logs and cars were moving just fine now, the game ran
-    '''car_left.update()
-    car_right.update()
-    log_full.update()
-    log_half.update()
-    home.update()
-    turtle_right.update()
-    turtle_right_half.update()
-    turtle_left.update()
-    turtle_left_half.update()
-    turtle_submerged.update()'''
+
 
 
     #Call functions you built in
@@ -237,9 +230,24 @@ while True:
         Player.y=-300
 
     if Player.is_collision(car_right):
-        Player.x=0
-        Player.y=-300
+        Player.x = 0
+        Player.y =-300
 
+    if Player.is_collision(log_left):
+        Player.dx = log_left.dx
+    
+
+    if Player.is_collision(log_right):
+        Player.dx = log_right.dx
+
+    if Player.x < -300:
+        Player.x = -300
+    if Player.x > 300:
+        Player.x = 300
+    if Player.y < -380:
+        Player.y = -380
+    if Player.y > 380:
+        Player.y = 380
     # Behaviour of objects that save the frog from drowning
     # and the function of the frog getting in the goal
 
