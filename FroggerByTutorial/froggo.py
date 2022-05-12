@@ -34,27 +34,16 @@ wn.tracer(0)
 # Of course I just copy-pasted the list of shapes from the GitHub, I had already individually copied them in
 
 # register shapes in wn
+# turns out the tutorial author made these himself using clipart in session 2
+# I should try making some sprites on next project
 shapes = ["frog.gif", "car_left.gif", "car_right.gif", "log_full.gif", "turtle_left.gif", "turtle_right.gif", "turtle_right_half.gif",
     "turtle_left_half.gif", "turtle_submerged.gif", "home.gif", "frog_home.gif", "frog_small.gif"]
 for shape in shapes:
     wn.register_shape(shape)
 '''
-leaving this mess in, because I didn't just copy-paste it off GitHub
-
-wn.register_shape("background.gif")
-wn.register_shape("car_left.gif")
-wn.register_shape("car_right.gif")
-wn.register_shape("frog_home.gif")
-wn.register_shape("frog_small.gif")
 #wn.register_shape("goal.png") # guessed wrong
-wn.register_shape("home.gif")
 wn.register_shape("log_full.gif")
 wn.register_shape("log_half.gif") # doesn't ever get used?
-wn.register_shape("turtle_left.gif")
-wn.register_shape("turtle_left_half.gif")
-wn.register_shape("turtle_right.gif")
-wn.register_shape("turtle_right_half.gif")
-wn.register_shape("turtle_submerged.gif")
 '''
 
 #Pen
@@ -213,35 +202,44 @@ while True:
     # update: I really did clean these up by guessing, not because I was eventually told to by the vid
     for object in movements:
         object.render(pen)
-    #Player.render(pen)
-
-    # Update objects and Screen
-    # Placeholder/guess: "for sprite in sprites: sprite.update()"
-    # Maybe I can design it that way, maybe it's inefficient. Maybe it's better as a sprite function, as it is looking like on the GitHub for the tutorial
-    for shape in movements:
-        shape.update() # Update: my logs and cars were moving just fine now, the game ran
+        object.update() # Update: my logs and cars were moving just fine now, the game ran
 
 
 
-    #Call functions you built in
-    #Check for collisions
-    if Player.is_collision(car_left):
-        Player.x=0
-        Player.y=-300
+# Old block: learning something new here
+#     #Call functions you built in
+#     #Check for collisions
+#     if Player.is_collision(car_left):
+#         Player.x=0
+#         Player.y=-300
+#
+#     if Player.is_collision(car_right):
+#         Player.x = 0
+#         Player.y =-300
+#
+#     if Player.is_collision(log_left): # Experiment note:
+#         Player.dx = log_left.dx #       DO NOT just replace if with while to see whether that fixes the dx problem!
+#         #                               becas# the cars will disappear, the game will freeze and only a keyboard interrupt
+#         #                               could close it!
+#
+#   In theory...
+    Player.dx = 0 # at this point in the mainloop, your movement speed is reset
+    #               but then it is instantly picked up whether you're colliding
+    #               with something in that iteration of the loop
+    for Sprite in movements:
+        if Player.is_collision(Sprite):
+            if isinstance(Sprite, Car):
+                Player.x = 0
+                Player.y = -300
+                break
+            elif isinstance(Sprite, Log):
+                Player.dx = Sprite.dx
+                break #
 
-    if Player.is_collision(car_right):
-        Player.x = 0
-        Player.y =-300
 
-    if Player.is_collision(log_left): # Experiment note:
-        Player.dx = log_left.dx #       DO NOT just replace if with while to see whether that fixes the dx problem!
-        #                               becas# the cars will disappear, the game will freeze and only a keyboard interrupt
-        #                               could close it!
-
-
-    if Player.is_collision(log_right):
-        Player.dx = log_right.dx
-
+# not in vid so far: player doesn't get pulled off screeen by logs or something
+# update: yeah, his are different but I like mine, it's not like I'm making this
+# on someone else's time or something
     if Player.x < -300:
         Player.x = -300
     if Player.x > 300:
@@ -250,8 +248,7 @@ while True:
         Player.y = -380
     if Player.y > 380:
         Player.y = 380
-    # Behaviour of objects that save the frog from drowning
-    # and the function of the frog getting in the goal
+
 
 
 
