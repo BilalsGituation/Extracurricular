@@ -1,5 +1,7 @@
 import turtle
 import math
+import time
+import random
 
 '''
 Context: I made Pong using @TokyoEdtech's tutorial on YouTube and am checking out
@@ -149,6 +151,11 @@ class Turt(Sprite): # confusingly, this turtle means... turtles.. :|
     def __init__(self, x, y, width, height, image, dx):
         Sprite.__init__(self, x, y, width, height, image)
         self.dx = dx
+        self.state = "full" # half, submerged
+        self.full_time = random.randint(8, 12)
+        self.half_time = random.randint(4, 6)
+        self.submerged_time = random.randint(4, 6)
+        self.start_time = time.time()
 
     def update(self):
         self.x += self.dx
@@ -157,10 +164,34 @@ class Turt(Sprite): # confusingly, this turtle means... turtles.. :|
             self.x=400
         if self.x > 400:
             self.x=-400
-
+        # update img based on state
+        if self.state == "full":
+            if self.dx > 0:
+                self.image = "turtle_right.gif"
+            else:
+                self.image = "turtle_left.gif"
+        elif self.state == "half_up" or self.state == "half_down":
+            if self.dx > 0:
+                self.image = "turtle_right_half.gif"
+            else:
+                self.image = "turtle_left_half.gif"
+        elif self.state == "submerged":
+            self.image = "turtle_submerged.gif"
 # Actually the home might more likely be another child of Sprite
 
-
+# Timer stuff
+        if self.state == "full" and time.time() - self.start_time > self.full_time:
+            self.state = "half_down"
+            self.start_time = time.time()
+        elif self.state == "half_down" and time.time() - self.start_time > self.half_time:
+            self.state = "submerged"
+            self.start_time = time.time()
+        elif self.state == "submerged" and time.time() - self.start_time > self.submerged_time:
+            self.state = "half_up"
+            self.start_time = time.time()
+        elif self.state == "half_up" and time.time() - self.start_time > self.half_time:
+            self.state = "full"
+            self.start_time = time.time()
 
 #Making Objects
 Player=Player(0,-300, 40, 40, "frog.gif")
@@ -173,7 +204,7 @@ log_right = Log(0,-85,121,40,"log_full.gif", 0.25)
 turt_left = Turt(0,-40,151,40,"turtle_left.gif", -0.2)
 turt_right = Turt(0,15,151,40,"turtle_right.gif", 0.2)
 log_left2 = Log(0,50,121,40,"log_left.gif", -0.2)
-turt_left2 =  Turt(400,140,151,40,"turtle_left.gif", -0.35)
+turt_left2 =  Turt(400,140,151,40,"turtle_left.gif", -0.3) # I have no idea why the frog stays on the other non-player non-car characters but this one is buggy
 log_right2 = Log(0,185,121,40,"log_full.gif", 0.3)
 log_right3 = Log(-400,95,121,40,"log_full.gif", 0.3)
 log_left3 = Log(0,65,121,40,"log_full.gif", -0.35)
