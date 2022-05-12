@@ -254,7 +254,7 @@ while True:
             elif isinstance(Sprite, Log):
                 Player.dx = Sprite.dx
                 break
-            elif isinstance(Sprite, Turt):
+            elif isinstance(Sprite, Turt) and Sprite.state != "submerged":
                 Player.dx = Sprite.dx
                 break
 
