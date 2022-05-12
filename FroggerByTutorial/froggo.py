@@ -182,12 +182,6 @@ movements = [car_left, car_right, log_left, log_right, turt_left, turt_right, tu
 # Player is updated and rendered last
 movements.append(Player)
 
-# Space to Make logs
-
-
-
-# Space to Make turts
-
 # Make home
 
 
