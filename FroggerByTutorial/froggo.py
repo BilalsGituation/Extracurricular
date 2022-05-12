@@ -134,7 +134,8 @@ class Log(Sprite):
         if self.x < -400:
             self.x=400
         if self.x > 400:
-            self.x=-400
+            self.x=-400 # Yep, he just pastes a copy of this in while giving the tutorial
+
 
 # Turts (turtles) is non-player object like logs, not cars, where collisions
 # reset the frog
@@ -142,8 +143,8 @@ class Log(Sprite):
 # for too long.. I think, based on there being a "turtle_submerged.gif" file in
 # the GitHub repository accompanying the tutorial
 
-class Turts(Sprite):
-
+class Turt(Sprite): # confusingly, this turtle means... turtles.. :|
+# so we're going to call this turtle "turt" for clarity
     def __init__(self, x, y, width, height, image, dx):
         Sprite.__init__(self, x, y, width, height, image)
         self.dx = dx
@@ -162,10 +163,20 @@ class Turts(Sprite):
 
 #Making Objects
 Player=Player(0,-300, 40, 40, "frog.gif")
-Player.render(pen)
+#Player.render(pen) #not sure why this was duplicated?
 
 car_left = Car(0,-255,121,40,"car_left.gif", -0.15)
 car_right = Car(0,255,121,40,"car_right.gif", 0.15)
+log_left = Log(0,-255,121,40,"log_full.gif", -0.25)
+log_right = Log(0,255,121,40,"log_full.gif", 0.25)
+
+movements = []
+#movements.append(Player)
+movements.append(car_left)
+movements.append(car_right)
+movements.append(log_left)
+movements.append(log_right)
+
 
 # Space to Make logs
 
@@ -192,16 +203,24 @@ wn.onkeypress(Player.frog_right, "Right")
 while True:
     #render
     # Placeholder/guess: "for shape in shapes: shape.render(pen)"
-    Player.render(pen)
+    '''Player.render(pen)
     car_left.render(pen)
     car_right.render(pen)
+    log_left.render(pen)
+    log_right.render(pen)'''
+    # Trying to be original and neater here, just leaving the mess for this commit at least, so it's not a copy-pasted version of the game
+    Player.render(pen)
+    for object in movements:
+        object.render(pen)
 
     # Update objects and Screen
     # Placeholder/guess: "for sprite in sprites: sprite.update()"
     # Maybe I can design it that way, maybe it's inefficient. Maybe it's better as a sprite function, as it is looking like on the GitHub for the tutorial
-    car_left.update()
+    for shape in movements:
+        shape.update() # Update: my logs and cars were moving just fine now, the game ran
+    '''car_left.update()
     car_right.update()
-    '''log_full.update()
+    log_full.update()
     log_half.update()
     home.update()
     turtle_right.update()
