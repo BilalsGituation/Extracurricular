@@ -88,6 +88,15 @@ class Player(Sprite):
         self.x += 40
     def update(self):
         self.x += self.dx
+    # player is bordered in. see commits for more verbose explanation
+        if Player.x < -300:
+            Player.x = -300
+        if Player.x > 300:
+            Player.x = 300
+        if Player.y < -380:
+            Player.y = -380
+        if Player.y > 380:
+            Player.y = 380
 # somehow the player needs to get to the goal. Either function here or new child
 
 
@@ -159,14 +168,17 @@ Player=Player(0,-300, 40, 40, "frog.gif")
 
 car_left = Car(0,-255,121,40,"car_left.gif", -0.15)
 car_right = Car(0,-175,121,40,"car_right.gif", 0.15)
-log_left = Log(0,135,121,40,"log_full.gif", -0.25)
-log_right = Log(0,180,121,40,"log_full.gif", 0.25)
+log_left = Log(0,-130,121,40,"log_full.gif", -0.25)
+log_right = Log(0,-85,121,40,"log_full.gif", 0.25)
+turt_left = Turt(0,-40,121,40,"turtle_left.gif", -0.2)
+turt_right = Turt(0,15,121,40,"turtle_right.gif", 0.2)
+log_left2 = Log(0,50,121,40,"log_left.gif", -0.2)
+turt_left2 =  Turt(400,140,121,40,"turtle_left.gif", -0.35)
+log_right2 = Log(0,185,121,40,"log_full.gif", 0.3)
+log_right3 = Log(-400,95,121,40,"log_full.gif", 0.3)
+log_left3 = Log(0,65,121,40,"log_full.gif", -0.35)
 
-movements = []
-movements.append(car_left)
-movements.append(car_right)
-movements.append(log_left)
-movements.append(log_right)
+movements = [car_left, car_right, log_left, log_right, turt_left, turt_right, turt_left2, turt_left2, log_right2, log_left3, log_right3]
 # Player is updated and rendered last
 movements.append(Player)
 
@@ -206,26 +218,8 @@ while True:
 
 
 
-# Old block: learning something new here
-#     #Call functions you built in
-#     #Check for collisions
-#     if Player.is_collision(car_left):
-#         Player.x=0
-#         Player.y=-300
 #
-#     if Player.is_collision(car_right):
-#         Player.x = 0
-#         Player.y =-300
-#
-#     if Player.is_collision(log_left): # Experiment note:
-#         Player.dx = log_left.dx #       DO NOT just replace if with while to see whether that fixes the dx problem!
-#         #                               becas# the cars will disappear, the game will freeze and only a keyboard interrupt
-#         #                               could close it!
-#
-#   In theory...
-    Player.dx = 0 # at this point in the mainloop, your movement speed is reset
-    #               but then it is instantly picked up whether you're colliding
-    #               with something in that iteration of the loop
+    Player.dx = 0
     for Sprite in movements:
         if Player.is_collision(Sprite):
             if isinstance(Sprite, Car):
@@ -234,20 +228,11 @@ while True:
                 break
             elif isinstance(Sprite, Log):
                 Player.dx = Sprite.dx
-                break #
+                break
+            elif isinstance(Sprite, Turt):
+                Player.dx = Sprite.dx
+                break
 
-
-# not in vid so far: player doesn't get pulled off screeen by logs or something
-# update: yeah, his are different but I like mine, it's not like I'm making this
-# on someone else's time or something
-    if Player.x < -300:
-        Player.x = -300
-    if Player.x > 300:
-        Player.x = 300
-    if Player.y < -380:
-        Player.y = -380
-    if Player.y > 380:
-        Player.y = 380
 
 
 
