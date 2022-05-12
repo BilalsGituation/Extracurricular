@@ -39,6 +39,8 @@ shapes = ["frog.gif", "car_left.gif", "car_right.gif", "log_full.gif", "turtle_l
 for shape in shapes:
     wn.register_shape(shape)
 '''
+leaving this mess in, because I didn't just copy-paste it off GitHub
+
 wn.register_shape("background.gif")
 wn.register_shape("car_left.gif")
 wn.register_shape("car_right.gif")
@@ -47,7 +49,7 @@ wn.register_shape("frog_small.gif")
 #wn.register_shape("goal.png") # guessed wrong
 wn.register_shape("home.gif")
 wn.register_shape("log_full.gif")
-wn.register_shape("log_half.gif")
+wn.register_shape("log_half.gif") # doesn't ever get used?
 wn.register_shape("turtle_left.gif")
 wn.register_shape("turtle_left_half.gif")
 wn.register_shape("turtle_right.gif")
