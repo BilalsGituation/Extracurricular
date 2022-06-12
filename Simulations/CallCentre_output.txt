@@ -1,0 +1,716 @@
+Starting sim of shift at call centre
+Customer 1 enters waiting queue at 0.00 minutes into shift.
+Customer 1 enters call at 0.00 minutes into shift.
+Customer 2 enters waiting queue at 2.00 minutes into shift.
+Customer 2 enters call at 2.00 minutes into shift.
+Customer 3 enters waiting queue at 3.00 minutes into shift.
+Customer 4 enters waiting queue at 4.00 minutes into shift.
+Customer 5 enters waiting queue at 5.00 minutes into shift.
+Customer support concluded for customer 1 at 5.68 minutes into shift.
+Customer 1 left call at 5.68 minutes into shift.
+Customer 3 enters call at 5.68 minutes into shift.
+Customer support concluded for customer 2 at 6.54 minutes into shift.
+Customer 2 left call at 6.54 minutes into shift.
+Customer 4 enters call at 6.54 minutes into shift.
+Customer support concluded for customer 3 at 7.50 minutes into shift.
+Customer 3 left call at 7.50 minutes into shift.
+Customer 5 enters call at 7.50 minutes into shift.
+Customer 6 enters waiting queue at 8.00 minutes into shift.
+Customer 7 enters waiting queue at 11.00 minutes into shift.
+Customer support concluded for customer 5 at 11.68 minutes into shift.
+Customer 5 left call at 11.68 minutes into shift.
+Customer 6 enters call at 11.68 minutes into shift.
+Customer 8 enters waiting queue at 12.00 minutes into shift.
+Customer support concluded for customer 4 at 12.44 minutes into shift.
+Customer 4 left call at 12.44 minutes into shift.
+Customer 7 enters call at 12.44 minutes into shift.
+Customer support concluded for customer 6 at 12.82 minutes into shift.
+Customer 6 left call at 12.82 minutes into shift.
+Customer 8 enters call at 12.82 minutes into shift.
+Customer 9 enters waiting queue at 13.00 minutes into shift.
+Customer support concluded for customer 8 at 13.82 minutes into shift.
+Customer 8 left call at 13.82 minutes into shift.
+Customer 9 enters call at 13.82 minutes into shift.
+Customer 10 enters waiting queue at 16.00 minutes into shift.
+Customer 11 enters waiting queue at 17.00 minutes into shift.
+Customer 12 enters waiting queue at 18.00 minutes into shift.
+Customer support concluded for customer 9 at 19.40 minutes into shift.
+Customer 9 left call at 19.40 minutes into shift.
+Customer 10 enters call at 19.40 minutes into shift.
+Customer support concluded for customer 7 at 19.58 minutes into shift.
+Customer 7 left call at 19.58 minutes into shift.
+Customer 11 enters call at 19.58 minutes into shift.
+Customer 13 enters waiting queue at 21.00 minutes into shift.
+Customer 14 enters waiting queue at 23.00 minutes into shift.
+Customer support concluded for customer 10 at 23.22 minutes into shift.
+Customer 10 left call at 23.22 minutes into shift.
+Customer 12 enters call at 23.22 minutes into shift.
+Customer 15 enters waiting queue at 24.00 minutes into shift.
+Customer 16 enters waiting queue at 27.00 minutes into shift.
+Customer support concluded for customer 12 at 27.57 minutes into shift.
+Customer 12 left call at 27.57 minutes into shift.
+Customer 13 enters call at 27.57 minutes into shift.
+Customer 17 enters waiting queue at 29.00 minutes into shift.
+Customer support concluded for customer 11 at 29.66 minutes into shift.
+Customer 11 left call at 29.66 minutes into shift.
+Customer 14 enters call at 29.66 minutes into shift.
+Customer 18 enters waiting queue at 31.00 minutes into shift.
+Customer 19 enters waiting queue at 32.00 minutes into shift.
+Customer support concluded for customer 13 at 34.84 minutes into shift.
+Customer 13 left call at 34.84 minutes into shift.
+Customer 15 enters call at 34.84 minutes into shift.
+Customer 20 enters waiting queue at 35.00 minutes into shift.
+Customer support concluded for customer 15 at 36.03 minutes into shift.
+Customer 15 left call at 36.03 minutes into shift.
+Customer 16 enters call at 36.03 minutes into shift.
+Customer 21 enters waiting queue at 37.00 minutes into shift.
+Customer support concluded for customer 16 at 37.03 minutes into shift.
+Customer 16 left call at 37.03 minutes into shift.
+Customer 17 enters call at 37.03 minutes into shift.
+Customer support concluded for customer 14 at 37.61 minutes into shift.
+Customer 14 left call at 37.61 minutes into shift.
+Customer 18 enters call at 37.61 minutes into shift.
+Customer support concluded for customer 18 at 38.61 minutes into shift.
+Customer 18 left call at 38.61 minutes into shift.
+Customer 19 enters call at 38.61 minutes into shift.
+Customer 22 enters waiting queue at 40.00 minutes into shift.
+Customer support concluded for customer 17 at 42.96 minutes into shift.
+Customer 17 left call at 42.96 minutes into shift.
+Customer 20 enters call at 42.96 minutes into shift.
+Customer 23 enters waiting queue at 43.00 minutes into shift.
+Customer 24 enters waiting queue at 44.00 minutes into shift.
+Customer 25 enters waiting queue at 45.00 minutes into shift.
+Customer support concluded for customer 19 at 45.41 minutes into shift.
+Customer 19 left call at 45.41 minutes into shift.
+Customer 21 enters call at 45.41 minutes into shift.
+Customer 26 enters waiting queue at 46.00 minutes into shift.
+Customer support concluded for customer 20 at 46.77 minutes into shift.
+Customer 20 left call at 46.77 minutes into shift.
+Customer 22 enters call at 46.77 minutes into shift.
+Customer 27 enters waiting queue at 48.00 minutes into shift.
+Customer support concluded for customer 21 at 48.91 minutes into shift.
+Customer 21 left call at 48.91 minutes into shift.
+Customer 23 enters call at 48.91 minutes into shift.
+Customer 28 enters waiting queue at 51.00 minutes into shift.
+Customer 29 enters waiting queue at 52.00 minutes into shift.
+Customer support concluded for customer 22 at 52.50 minutes into shift.
+Customer 22 left call at 52.50 minutes into shift.
+Customer 24 enters call at 52.50 minutes into shift.
+Customer 30 enters waiting queue at 55.00 minutes into shift.
+Customer support concluded for customer 24 at 55.23 minutes into shift.
+Customer 24 left call at 55.23 minutes into shift.
+Customer 25 enters call at 55.23 minutes into shift.
+Customer support concluded for customer 23 at 56.83 minutes into shift.
+Customer 23 left call at 56.83 minutes into shift.
+Customer 26 enters call at 56.83 minutes into shift.
+Customer 31 enters waiting queue at 58.00 minutes into shift.
+Customer support concluded for customer 25 at 58.02 minutes into shift.
+Customer 25 left call at 58.02 minutes into shift.
+Customer 27 enters call at 58.02 minutes into shift.
+Customer 32 enters waiting queue at 61.00 minutes into shift.
+Customer support concluded for customer 27 at 61.57 minutes into shift.
+Customer 27 left call at 61.57 minutes into shift.
+Customer 28 enters call at 61.57 minutes into shift.
+Customer support concluded for customer 28 at 62.57 minutes into shift.
+Customer 28 left call at 62.57 minutes into shift.
+Customer 29 enters call at 62.57 minutes into shift.
+Customer 33 enters waiting queue at 63.00 minutes into shift.
+Customer support concluded for customer 26 at 65.82 minutes into shift.
+Customer 26 left call at 65.82 minutes into shift.
+Customer 30 enters call at 65.82 minutes into shift.
+Customer 34 enters waiting queue at 66.00 minutes into shift.
+Customer 35 enters waiting queue at 67.00 minutes into shift.
+Customer 36 enters waiting queue at 68.00 minutes into shift.
+Customer 37 enters waiting queue at 69.00 minutes into shift.
+Customer support concluded for customer 29 at 69.25 minutes into shift.
+Customer 29 left call at 69.25 minutes into shift.
+Customer 31 enters call at 69.25 minutes into shift.
+Customer support concluded for customer 31 at 70.26 minutes into shift.
+Customer 31 left call at 70.26 minutes into shift.
+Customer 32 enters call at 70.26 minutes into shift.
+Customer support concluded for customer 30 at 71.90 minutes into shift.
+Customer 30 left call at 71.90 minutes into shift.
+Customer 33 enters call at 71.90 minutes into shift.
+Customer 38 enters waiting queue at 72.00 minutes into shift.
+Customer 39 enters waiting queue at 73.00 minutes into shift.
+Customer 40 enters waiting queue at 74.00 minutes into shift.
+Customer support concluded for customer 32 at 75.51 minutes into shift.
+Customer 32 left call at 75.51 minutes into shift.
+Customer 34 enters call at 75.51 minutes into shift.
+Customer 41 enters waiting queue at 76.00 minutes into shift.
+Customer 42 enters waiting queue at 77.00 minutes into shift.
+Customer support concluded for customer 33 at 77.61 minutes into shift.
+Customer 33 left call at 77.61 minutes into shift.
+Customer 35 enters call at 77.61 minutes into shift.
+Customer 43 enters waiting queue at 78.00 minutes into shift.
+Customer 44 enters waiting queue at 79.00 minutes into shift.
+Customer 45 enters waiting queue at 80.00 minutes into shift.
+Customer support concluded for customer 34 at 82.78 minutes into shift.
+Customer 34 left call at 82.78 minutes into shift.
+Customer 36 enters call at 82.78 minutes into shift.
+Customer 46 enters waiting queue at 83.00 minutes into shift.
+Customer support concluded for customer 36 at 83.78 minutes into shift.
+Customer 36 left call at 83.78 minutes into shift.
+Customer 37 enters call at 83.78 minutes into shift.
+Customer 47 enters waiting queue at 84.00 minutes into shift.
+Customer 48 enters waiting queue at 85.00 minutes into shift.
+Customer 49 enters waiting queue at 86.00 minutes into shift.
+Customer support concluded for customer 35 at 86.50 minutes into shift.
+Customer 35 left call at 86.50 minutes into shift.
+Customer 38 enters call at 86.50 minutes into shift.
+Customer 50 enters waiting queue at 87.00 minutes into shift.
+Customer 51 enters waiting queue at 90.00 minutes into shift.
+Customer 52 enters waiting queue at 92.00 minutes into shift.
+Customer support concluded for customer 37 at 92.80 minutes into shift.
+Customer 37 left call at 92.80 minutes into shift.
+Customer 39 enters call at 92.80 minutes into shift.
+Customer support concluded for customer 38 at 93.78 minutes into shift.
+Customer 38 left call at 93.78 minutes into shift.
+Customer 40 enters call at 93.78 minutes into shift.
+Customer 53 enters waiting queue at 95.00 minutes into shift.
+Customer support concluded for customer 39 at 96.05 minutes into shift.
+Customer 39 left call at 96.05 minutes into shift.
+Customer 41 enters call at 96.05 minutes into shift.
+Customer 54 enters waiting queue at 97.00 minutes into shift.
+Customer support concluded for customer 40 at 97.60 minutes into shift.
+Customer 40 left call at 97.60 minutes into shift.
+Customer 42 enters call at 97.60 minutes into shift.
+Customer 55 enters waiting queue at 98.00 minutes into shift.
+Customer 56 enters waiting queue at 99.00 minutes into shift.
+Customer support concluded for customer 41 at 99.95 minutes into shift.
+Customer 41 left call at 99.95 minutes into shift.
+Customer 43 enters call at 99.95 minutes into shift.
+Customer 57 enters waiting queue at 102.00 minutes into shift.
+Customer support concluded for customer 42 at 103.90 minutes into shift.
+Customer 42 left call at 103.90 minutes into shift.
+Customer 44 enters call at 103.90 minutes into shift.
+Customer 58 enters waiting queue at 104.00 minutes into shift.
+Customer 59 enters waiting queue at 105.00 minutes into shift.
+Customer support concluded for customer 44 at 107.16 minutes into shift.
+Customer 44 left call at 107.16 minutes into shift.
+Customer 45 enters call at 107.16 minutes into shift.
+Customer 60 enters waiting queue at 108.00 minutes into shift.
+Customer 61 enters waiting queue at 110.00 minutes into shift.
+Customer 62 enters waiting queue at 111.00 minutes into shift.
+Customer 63 enters waiting queue at 112.00 minutes into shift.
+Customer 64 enters waiting queue at 115.00 minutes into shift.
+Customer support concluded for customer 43 at 115.84 minutes into shift.
+Customer 43 left call at 115.84 minutes into shift.
+Customer 46 enters call at 115.84 minutes into shift.
+Customer support concluded for customer 45 at 116.10 minutes into shift.
+Customer 45 left call at 116.10 minutes into shift.
+Customer 47 enters call at 116.10 minutes into shift.
+Customer 65 enters waiting queue at 118.00 minutes into shift.
+Customer 66 enters waiting queue at 119.00 minutes into shift.
+Customer 67 enters waiting queue at 122.00 minutes into shift.
+Customer support concluded for customer 47 at 122.27 minutes into shift.
+Customer 47 left call at 122.27 minutes into shift.
+Customer 48 enters call at 122.27 minutes into shift.
+Customer support concluded for customer 48 at 123.54 minutes into shift.
+Customer 48 left call at 123.54 minutes into shift.
+Customer 49 enters call at 123.54 minutes into shift.
+Customer support concluded for customer 46 at 124.26 minutes into shift.
+Customer 46 left call at 124.26 minutes into shift.
+Customer 50 enters call at 124.26 minutes into shift.
+Customer 68 enters waiting queue at 125.00 minutes into shift.
+Customer support concluded for customer 50 at 127.96 minutes into shift.
+Customer 50 left call at 127.96 minutes into shift.
+Customer 51 enters call at 127.96 minutes into shift.
+Customer 69 enters waiting queue at 128.00 minutes into shift.
+Customer support concluded for customer 51 at 129.02 minutes into shift.
+Customer 51 left call at 129.02 minutes into shift.
+Customer 52 enters call at 129.02 minutes into shift.
+Customer 70 enters waiting queue at 130.00 minutes into shift.
+Customer 71 enters waiting queue at 131.00 minutes into shift.
+Customer 72 enters waiting queue at 132.00 minutes into shift.
+Customer support concluded for customer 49 at 134.43 minutes into shift.
+Customer 49 left call at 134.43 minutes into shift.
+Customer 53 enters call at 134.43 minutes into shift.
+Customer 73 enters waiting queue at 135.00 minutes into shift.
+Customer 74 enters waiting queue at 138.00 minutes into shift.
+Customer 75 enters waiting queue at 139.00 minutes into shift.
+Customer 76 enters waiting queue at 142.00 minutes into shift.
+Customer support concluded for customer 52 at 143.17 minutes into shift.
+Customer 52 left call at 143.17 minutes into shift.
+Customer 54 enters call at 143.17 minutes into shift.
+Customer 77 enters waiting queue at 144.00 minutes into shift.
+Customer support concluded for customer 53 at 145.10 minutes into shift.
+Customer 53 left call at 145.10 minutes into shift.
+Customer 55 enters call at 145.10 minutes into shift.
+Customer support concluded for customer 55 at 146.10 minutes into shift.
+Customer 55 left call at 146.10 minutes into shift.
+Customer 56 enters call at 146.10 minutes into shift.
+Customer 78 enters waiting queue at 147.00 minutes into shift.
+Customer support concluded for customer 56 at 149.27 minutes into shift.
+Customer 56 left call at 149.27 minutes into shift.
+Customer 57 enters call at 149.27 minutes into shift.
+Customer 79 enters waiting queue at 150.00 minutes into shift.
+Customer 80 enters waiting queue at 151.00 minutes into shift.
+Customer support concluded for customer 54 at 152.79 minutes into shift.
+Customer 54 left call at 152.79 minutes into shift.
+Customer 58 enters call at 152.79 minutes into shift.
+Customer 81 enters waiting queue at 154.00 minutes into shift.
+Customer 82 enters waiting queue at 157.00 minutes into shift.
+Customer support concluded for customer 58 at 157.39 minutes into shift.
+Customer 58 left call at 157.39 minutes into shift.
+Customer 59 enters call at 157.39 minutes into shift.
+Customer support concluded for customer 59 at 158.39 minutes into shift.
+Customer 59 left call at 158.39 minutes into shift.
+Customer 60 enters call at 158.39 minutes into shift.
+Customer 83 enters waiting queue at 159.00 minutes into shift.
+Customer support concluded for customer 60 at 160.51 minutes into shift.
+Customer 60 left call at 160.51 minutes into shift.
+Customer 61 enters call at 160.51 minutes into shift.
+Customer 84 enters waiting queue at 161.00 minutes into shift.
+Customer support concluded for customer 57 at 161.23 minutes into shift.
+Customer 57 left call at 161.23 minutes into shift.
+Customer 62 enters call at 161.23 minutes into shift.
+Customer 85 enters waiting queue at 163.00 minutes into shift.
+Customer support concluded for customer 61 at 163.77 minutes into shift.
+Customer 61 left call at 163.77 minutes into shift.
+Customer 63 enters call at 163.77 minutes into shift.
+Customer support concluded for customer 63 at 164.77 minutes into shift.
+Customer 63 left call at 164.77 minutes into shift.
+Customer 64 enters call at 164.77 minutes into shift.
+Customer 86 enters waiting queue at 166.00 minutes into shift.
+Customer 87 enters waiting queue at 169.00 minutes into shift.
+Customer support concluded for customer 62 at 171.63 minutes into shift.
+Customer 62 left call at 171.63 minutes into shift.
+Customer 65 enters call at 171.63 minutes into shift.
+Customer 88 enters waiting queue at 172.00 minutes into shift.
+Customer 89 enters waiting queue at 174.00 minutes into shift.
+Customer 90 enters waiting queue at 175.00 minutes into shift.
+Customer 91 enters waiting queue at 176.00 minutes into shift.
+Customer support concluded for customer 64 at 177.56 minutes into shift.
+Customer 64 left call at 177.56 minutes into shift.
+Customer 66 enters call at 177.56 minutes into shift.
+Customer 92 enters waiting queue at 178.00 minutes into shift.
+Customer support concluded for customer 65 at 179.49 minutes into shift.
+Customer 65 left call at 179.49 minutes into shift.
+Customer 67 enters call at 179.49 minutes into shift.
+Customer 93 enters waiting queue at 180.00 minutes into shift.
+Customer support concluded for customer 67 at 180.49 minutes into shift.
+Customer 67 left call at 180.49 minutes into shift.
+Customer 68 enters call at 180.49 minutes into shift.
+Customer 94 enters waiting queue at 181.00 minutes into shift.
+Customer support concluded for customer 66 at 181.06 minutes into shift.
+Customer 66 left call at 181.06 minutes into shift.
+Customer 69 enters call at 181.06 minutes into shift.
+Customer 95 enters waiting queue at 184.00 minutes into shift.
+Customer support concluded for customer 68 at 186.57 minutes into shift.
+Customer 68 left call at 186.57 minutes into shift.
+Customer 70 enters call at 186.57 minutes into shift.
+Customer 96 enters waiting queue at 187.00 minutes into shift.
+Customer support concluded for customer 69 at 187.39 minutes into shift.
+Customer 69 left call at 187.39 minutes into shift.
+Customer 71 enters call at 187.39 minutes into shift.
+Customer 97 enters waiting queue at 188.00 minutes into shift.
+Customer 98 enters waiting queue at 191.00 minutes into shift.
+Customer support concluded for customer 70 at 193.93 minutes into shift.
+Customer 70 left call at 193.93 minutes into shift.
+Customer 72 enters call at 193.93 minutes into shift.
+Customer 99 enters waiting queue at 194.00 minutes into shift.
+Customer 100 enters waiting queue at 196.00 minutes into shift.
+Customer support concluded for customer 71 at 196.65 minutes into shift.
+Customer 71 left call at 196.65 minutes into shift.
+Customer 73 enters call at 196.65 minutes into shift.
+Customer 101 enters waiting queue at 198.00 minutes into shift.
+Customer support concluded for customer 73 at 200.47 minutes into shift.
+Customer 73 left call at 200.47 minutes into shift.
+Customer 74 enters call at 200.47 minutes into shift.
+Customer support concluded for customer 72 at 200.79 minutes into shift.
+Customer 72 left call at 200.79 minutes into shift.
+Customer 75 enters call at 200.79 minutes into shift.
+Customer 102 enters waiting queue at 201.00 minutes into shift.
+Customer 103 enters waiting queue at 204.00 minutes into shift.
+Customer 104 enters waiting queue at 207.00 minutes into shift.
+Customer support concluded for customer 74 at 208.07 minutes into shift.
+Customer 74 left call at 208.07 minutes into shift.
+Customer 76 enters call at 208.07 minutes into shift.
+Customer support concluded for customer 76 at 209.07 minutes into shift.
+Customer 76 left call at 209.07 minutes into shift.
+Customer 77 enters call at 209.07 minutes into shift.
+Customer support concluded for customer 75 at 209.19 minutes into shift.
+Customer 75 left call at 209.19 minutes into shift.
+Customer 78 enters call at 209.19 minutes into shift.
+Customer 105 enters waiting queue at 210.00 minutes into shift.
+Customer 106 enters waiting queue at 211.00 minutes into shift.
+Customer 107 enters waiting queue at 213.00 minutes into shift.
+Customer support concluded for customer 78 at 213.43 minutes into shift.
+Customer 78 left call at 213.43 minutes into shift.
+Customer 79 enters call at 213.43 minutes into shift.
+Customer 108 enters waiting queue at 216.00 minutes into shift.
+Customer 109 enters waiting queue at 219.00 minutes into shift.
+Customer support concluded for customer 79 at 219.34 minutes into shift.
+Customer 79 left call at 219.34 minutes into shift.
+Customer 80 enters call at 219.34 minutes into shift.
+Customer 110 enters waiting queue at 221.00 minutes into shift.
+Customer support concluded for customer 77 at 222.02 minutes into shift.
+Customer 77 left call at 222.02 minutes into shift.
+Customer 81 enters call at 222.02 minutes into shift.
+Customer 111 enters waiting queue at 224.00 minutes into shift.
+Customer 112 enters waiting queue at 225.00 minutes into shift.
+Customer support concluded for customer 80 at 225.22 minutes into shift.
+Customer 80 left call at 225.22 minutes into shift.
+Customer 82 enters call at 225.22 minutes into shift.
+Customer support concluded for customer 81 at 226.43 minutes into shift.
+Customer 81 left call at 226.43 minutes into shift.
+Customer 83 enters call at 226.43 minutes into shift.
+Customer 113 enters waiting queue at 228.00 minutes into shift.
+Customer 114 enters waiting queue at 231.00 minutes into shift.
+Customer support concluded for customer 82 at 231.67 minutes into shift.
+Customer 82 left call at 231.67 minutes into shift.
+Customer 84 enters call at 231.67 minutes into shift.
+Customer 115 enters waiting queue at 234.00 minutes into shift.
+Customer support concluded for customer 84 at 236.70 minutes into shift.
+Customer 84 left call at 236.70 minutes into shift.
+Customer 85 enters call at 236.70 minutes into shift.
+Customer 116 enters waiting queue at 237.00 minutes into shift.
+Customer support concluded for customer 83 at 237.86 minutes into shift.
+Customer 83 left call at 237.86 minutes into shift.
+Customer 86 enters call at 237.86 minutes into shift.
+Customer support concluded for customer 85 at 238.71 minutes into shift.
+Customer 85 left call at 238.71 minutes into shift.
+Customer 87 enters call at 238.71 minutes into shift.
+Customer 117 enters waiting queue at 239.00 minutes into shift.
+Customer 118 enters waiting queue at 240.00 minutes into shift.
+Customer 119 enters waiting queue at 242.00 minutes into shift.
+Customer 120 enters waiting queue at 243.00 minutes into shift.
+Customer support concluded for customer 87 at 243.66 minutes into shift.
+Customer 87 left call at 243.66 minutes into shift.
+Customer 88 enters call at 243.66 minutes into shift.
+Customer 121 enters waiting queue at 246.00 minutes into shift.
+Customer 122 enters waiting queue at 247.00 minutes into shift.
+Customer 123 enters waiting queue at 248.00 minutes into shift.
+Customer 124 enters waiting queue at 249.00 minutes into shift.
+Customer support concluded for customer 86 at 249.87 minutes into shift.
+Customer 86 left call at 249.87 minutes into shift.
+Customer 89 enters call at 249.87 minutes into shift.
+Customer support concluded for customer 88 at 251.46 minutes into shift.
+Customer 88 left call at 251.46 minutes into shift.
+Customer 90 enters call at 251.46 minutes into shift.
+Customer 125 enters waiting queue at 252.00 minutes into shift.
+Customer 126 enters waiting queue at 253.00 minutes into shift.
+Customer 127 enters waiting queue at 255.00 minutes into shift.
+Customer support concluded for customer 89 at 256.42 minutes into shift.
+Customer 89 left call at 256.42 minutes into shift.
+Customer 91 enters call at 256.42 minutes into shift.
+Customer support concluded for customer 90 at 257.60 minutes into shift.
+Customer 90 left call at 257.60 minutes into shift.
+Customer 92 enters call at 257.60 minutes into shift.
+Customer 128 enters waiting queue at 258.00 minutes into shift.
+Customer 129 enters waiting queue at 259.00 minutes into shift.
+Customer 130 enters waiting queue at 262.00 minutes into shift.
+Customer 131 enters waiting queue at 264.00 minutes into shift.
+Customer support concluded for customer 92 at 265.94 minutes into shift.
+Customer 92 left call at 265.94 minutes into shift.
+Customer 93 enters call at 265.94 minutes into shift.
+Customer support concluded for customer 91 at 266.74 minutes into shift.
+Customer 91 left call at 266.74 minutes into shift.
+Customer 94 enters call at 266.74 minutes into shift.
+Customer support concluded for customer 93 at 266.94 minutes into shift.
+Customer 93 left call at 266.94 minutes into shift.
+Customer 95 enters call at 266.94 minutes into shift.
+Customer 132 enters waiting queue at 267.00 minutes into shift.
+Customer 133 enters waiting queue at 270.00 minutes into shift.
+Customer support concluded for customer 94 at 270.45 minutes into shift.
+Customer 94 left call at 270.45 minutes into shift.
+Customer 96 enters call at 270.45 minutes into shift.
+Customer 134 enters waiting queue at 272.00 minutes into shift.
+Customer 135 enters waiting queue at 273.00 minutes into shift.
+Customer 136 enters waiting queue at 274.00 minutes into shift.
+Customer support concluded for customer 96 at 274.79 minutes into shift.
+Customer 96 left call at 274.79 minutes into shift.
+Customer 97 enters call at 274.79 minutes into shift.
+Customer 137 enters waiting queue at 276.00 minutes into shift.
+Customer support concluded for customer 97 at 278.26 minutes into shift.
+Customer 97 left call at 278.26 minutes into shift.
+Customer 98 enters call at 278.26 minutes into shift.
+Customer 138 enters waiting queue at 279.00 minutes into shift.
+Customer support concluded for customer 95 at 280.44 minutes into shift.
+Customer 95 left call at 280.44 minutes into shift.
+Customer 99 enters call at 280.44 minutes into shift.
+Customer 139 enters waiting queue at 282.00 minutes into shift.
+Customer 140 enters waiting queue at 283.00 minutes into shift.
+Customer support concluded for customer 99 at 283.02 minutes into shift.
+Customer 99 left call at 283.02 minutes into shift.
+Customer 100 enters call at 283.02 minutes into shift.
+Customer 141 enters waiting queue at 285.00 minutes into shift.
+Customer support concluded for customer 98 at 285.15 minutes into shift.
+Customer 98 left call at 285.15 minutes into shift.
+Customer 101 enters call at 285.15 minutes into shift.
+Customer 142 enters waiting queue at 287.00 minutes into shift.
+Customer support concluded for customer 100 at 287.39 minutes into shift.
+Customer 100 left call at 287.39 minutes into shift.
+Customer 102 enters call at 287.39 minutes into shift.
+Customer 143 enters waiting queue at 288.00 minutes into shift.
+Customer 144 enters waiting queue at 289.00 minutes into shift.
+Customer support concluded for customer 101 at 290.08 minutes into shift.
+Customer 101 left call at 290.08 minutes into shift.
+Customer 103 enters call at 290.08 minutes into shift.
+Customer 145 enters waiting queue at 292.00 minutes into shift.
+Customer 146 enters waiting queue at 293.00 minutes into shift.
+Customer support concluded for customer 103 at 293.64 minutes into shift.
+Customer 103 left call at 293.64 minutes into shift.
+Customer 104 enters call at 293.64 minutes into shift.
+Customer 147 enters waiting queue at 294.00 minutes into shift.
+Customer support concluded for customer 102 at 296.34 minutes into shift.
+Customer 102 left call at 296.34 minutes into shift.
+Customer 105 enters call at 296.34 minutes into shift.
+Customer 148 enters waiting queue at 297.00 minutes into shift.
+Customer 149 enters waiting queue at 299.00 minutes into shift.
+Customer support concluded for customer 104 at 299.25 minutes into shift.
+Customer 104 left call at 299.25 minutes into shift.
+Customer 106 enters call at 299.25 minutes into shift.
+Customer support concluded for customer 105 at 299.72 minutes into shift.
+Customer 105 left call at 299.72 minutes into shift.
+Customer 107 enters call at 299.72 minutes into shift.
+Customer 150 enters waiting queue at 300.00 minutes into shift.
+Customer 151 enters waiting queue at 301.00 minutes into shift.
+Customer 152 enters waiting queue at 302.00 minutes into shift.
+Customer 153 enters waiting queue at 303.00 minutes into shift.
+Customer support concluded for customer 107 at 304.31 minutes into shift.
+Customer 107 left call at 304.31 minutes into shift.
+Customer 108 enters call at 304.31 minutes into shift.
+Customer 154 enters waiting queue at 306.00 minutes into shift.
+Customer support concluded for customer 106 at 306.42 minutes into shift.
+Customer 106 left call at 306.42 minutes into shift.
+Customer 109 enters call at 306.42 minutes into shift.
+Customer 155 enters waiting queue at 309.00 minutes into shift.
+Customer support concluded for customer 108 at 310.35 minutes into shift.
+Customer 108 left call at 310.35 minutes into shift.
+Customer 110 enters call at 310.35 minutes into shift.
+Customer support concluded for customer 109 at 310.75 minutes into shift.
+Customer 109 left call at 310.75 minutes into shift.
+Customer 111 enters call at 310.75 minutes into shift.
+Customer 156 enters waiting queue at 311.00 minutes into shift.
+Customer support concluded for customer 110 at 311.35 minutes into shift.
+Customer 110 left call at 311.35 minutes into shift.
+Customer 112 enters call at 311.35 minutes into shift.
+Customer support concluded for customer 111 at 311.75 minutes into shift.
+Customer 111 left call at 311.75 minutes into shift.
+Customer 113 enters call at 311.75 minutes into shift.
+Customer 157 enters waiting queue at 312.00 minutes into shift.
+Customer support concluded for customer 113 at 312.75 minutes into shift.
+Customer 113 left call at 312.75 minutes into shift.
+Customer 114 enters call at 312.75 minutes into shift.
+Customer 158 enters waiting queue at 313.00 minutes into shift.
+Customer support concluded for customer 114 at 313.75 minutes into shift.
+Customer 114 left call at 313.75 minutes into shift.
+Customer 115 enters call at 313.75 minutes into shift.
+Customer 159 enters waiting queue at 315.00 minutes into shift.
+Customer 160 enters waiting queue at 316.00 minutes into shift.
+Customer support concluded for customer 112 at 317.04 minutes into shift.
+Customer 112 left call at 317.04 minutes into shift.
+Customer 116 enters call at 317.04 minutes into shift.
+Customer 161 enters waiting queue at 319.00 minutes into shift.
+Customer 162 enters waiting queue at 320.00 minutes into shift.
+Customer support concluded for customer 115 at 322.35 minutes into shift.
+Customer 115 left call at 322.35 minutes into shift.
+Customer 117 enters call at 322.35 minutes into shift.
+Customer 163 enters waiting queue at 323.00 minutes into shift.
+Customer support concluded for customer 116 at 324.58 minutes into shift.
+Customer 116 left call at 324.58 minutes into shift.
+Customer 118 enters call at 324.58 minutes into shift.
+Customer 164 enters waiting queue at 325.00 minutes into shift.
+Customer 165 enters waiting queue at 327.00 minutes into shift.
+Customer 166 enters waiting queue at 329.00 minutes into shift.
+Customer 167 enters waiting queue at 330.00 minutes into shift.
+Customer support concluded for customer 117 at 330.73 minutes into shift.
+Customer 117 left call at 330.73 minutes into shift.
+Customer 119 enters call at 330.73 minutes into shift.
+Customer 168 enters waiting queue at 331.00 minutes into shift.
+Customer 169 enters waiting queue at 334.00 minutes into shift.
+Customer support concluded for customer 118 at 335.91 minutes into shift.
+Customer 118 left call at 335.91 minutes into shift.
+Customer 120 enters call at 335.91 minutes into shift.
+Customer 170 enters waiting queue at 337.00 minutes into shift.
+Customer support concluded for customer 119 at 338.96 minutes into shift.
+Customer 119 left call at 338.96 minutes into shift.
+Customer 121 enters call at 338.96 minutes into shift.
+Customer 171 enters waiting queue at 340.00 minutes into shift.
+Customer 172 enters waiting queue at 342.00 minutes into shift.
+Customer support concluded for customer 120 at 343.69 minutes into shift.
+Customer 120 left call at 343.69 minutes into shift.
+Customer 122 enters call at 343.69 minutes into shift.
+Customer 173 enters waiting queue at 344.00 minutes into shift.
+Customer 174 enters waiting queue at 346.00 minutes into shift.
+Customer support concluded for customer 122 at 347.76 minutes into shift.
+Customer 122 left call at 347.76 minutes into shift.
+Customer 123 enters call at 347.76 minutes into shift.
+Customer support concluded for customer 121 at 347.82 minutes into shift.
+Customer 121 left call at 347.82 minutes into shift.
+Customer 124 enters call at 347.82 minutes into shift.
+Customer 175 enters waiting queue at 348.00 minutes into shift.
+Customer 176 enters waiting queue at 351.00 minutes into shift.
+Customer 177 enters waiting queue at 352.00 minutes into shift.
+Customer support concluded for customer 124 at 352.25 minutes into shift.
+Customer 124 left call at 352.25 minutes into shift.
+Customer 125 enters call at 352.25 minutes into shift.
+Customer 178 enters waiting queue at 353.00 minutes into shift.
+Customer 179 enters waiting queue at 354.00 minutes into shift.
+Customer support concluded for customer 123 at 354.55 minutes into shift.
+Customer 123 left call at 354.55 minutes into shift.
+Customer 126 enters call at 354.55 minutes into shift.
+Customer 180 enters waiting queue at 355.00 minutes into shift.
+Customer 181 enters waiting queue at 357.00 minutes into shift.
+Customer support concluded for customer 126 at 358.54 minutes into shift.
+Customer 126 left call at 358.54 minutes into shift.
+Customer 127 enters call at 358.54 minutes into shift.
+Customer 182 enters waiting queue at 360.00 minutes into shift.
+Customer 183 enters waiting queue at 361.00 minutes into shift.
+Customer 184 enters waiting queue at 362.00 minutes into shift.
+Customer support concluded for customer 127 at 362.75 minutes into shift.
+Customer 127 left call at 362.75 minutes into shift.
+Customer 128 enters call at 362.75 minutes into shift.
+Customer 185 enters waiting queue at 363.00 minutes into shift.
+Customer support concluded for customer 125 at 363.51 minutes into shift.
+Customer 125 left call at 363.51 minutes into shift.
+Customer 129 enters call at 363.51 minutes into shift.
+Customer 186 enters waiting queue at 365.00 minutes into shift.
+Customer 187 enters waiting queue at 366.00 minutes into shift.
+Customer support concluded for customer 128 at 366.20 minutes into shift.
+Customer 128 left call at 366.20 minutes into shift.
+Customer 130 enters call at 366.20 minutes into shift.
+Customer support concluded for customer 129 at 366.85 minutes into shift.
+Customer 129 left call at 366.85 minutes into shift.
+Customer 131 enters call at 366.85 minutes into shift.
+Customer support concluded for customer 131 at 367.85 minutes into shift.
+Customer 131 left call at 367.85 minutes into shift.
+Customer 132 enters call at 367.85 minutes into shift.
+Customer support concluded for customer 132 at 368.85 minutes into shift.
+Customer 132 left call at 368.85 minutes into shift.
+Customer 133 enters call at 368.85 minutes into shift.
+Customer 188 enters waiting queue at 369.00 minutes into shift.
+Customer 189 enters waiting queue at 370.00 minutes into shift.
+Customer support concluded for customer 133 at 370.75 minutes into shift.
+Customer 133 left call at 370.75 minutes into shift.
+Customer 134 enters call at 370.75 minutes into shift.
+Customer support concluded for customer 134 at 371.75 minutes into shift.
+Customer 134 left call at 371.75 minutes into shift.
+Customer 135 enters call at 371.75 minutes into shift.
+Customer 190 enters waiting queue at 372.00 minutes into shift.
+Customer 191 enters waiting queue at 373.00 minutes into shift.
+Customer support concluded for customer 135 at 375.74 minutes into shift.
+Customer 135 left call at 375.74 minutes into shift.
+Customer 136 enters call at 375.74 minutes into shift.
+Customer 192 enters waiting queue at 376.00 minutes into shift.
+Customer 193 enters waiting queue at 377.00 minutes into shift.
+Customer support concluded for customer 130 at 377.44 minutes into shift.
+Customer 130 left call at 377.44 minutes into shift.
+Customer 137 enters call at 377.44 minutes into shift.
+Customer 194 enters waiting queue at 378.00 minutes into shift.
+Customer support concluded for customer 136 at 379.67 minutes into shift.
+Customer 136 left call at 379.67 minutes into shift.
+Customer 138 enters call at 379.67 minutes into shift.
+Customer 195 enters waiting queue at 380.00 minutes into shift.
+Customer support concluded for customer 137 at 380.24 minutes into shift.
+Customer 137 left call at 380.24 minutes into shift.
+Customer 139 enters call at 380.24 minutes into shift.
+Customer support concluded for customer 138 at 381.50 minutes into shift.
+Customer 138 left call at 381.50 minutes into shift.
+Customer 140 enters call at 381.50 minutes into shift.
+Customer support concluded for customer 139 at 381.71 minutes into shift.
+Customer 139 left call at 381.71 minutes into shift.
+Customer 141 enters call at 381.71 minutes into shift.
+Customer 196 enters waiting queue at 382.00 minutes into shift.
+Customer 197 enters waiting queue at 385.00 minutes into shift.
+Customer support concluded for customer 141 at 385.37 minutes into shift.
+Customer 141 left call at 385.37 minutes into shift.
+Customer 142 enters call at 385.37 minutes into shift.
+Customer 198 enters waiting queue at 387.00 minutes into shift.
+Customer 199 enters waiting queue at 390.00 minutes into shift.
+Customer 200 enters waiting queue at 391.00 minutes into shift.
+Customer support concluded for customer 140 at 391.42 minutes into shift.
+Customer 140 left call at 391.42 minutes into shift.
+Customer 143 enters call at 391.42 minutes into shift.
+Customer 201 enters waiting queue at 392.00 minutes into shift.
+Customer support concluded for customer 143 at 392.42 minutes into shift.
+Customer 143 left call at 392.42 minutes into shift.
+Customer 144 enters call at 392.42 minutes into shift.
+Customer 202 enters waiting queue at 395.00 minutes into shift.
+Customer 203 enters waiting queue at 398.00 minutes into shift.
+Customer 204 enters waiting queue at 399.00 minutes into shift.
+Customer support concluded for customer 142 at 399.65 minutes into shift.
+Customer 142 left call at 399.65 minutes into shift.
+Customer 145 enters call at 399.65 minutes into shift.
+Customer support concluded for customer 145 at 400.65 minutes into shift.
+Customer 145 left call at 400.65 minutes into shift.
+Customer 146 enters call at 400.65 minutes into shift.
+Customer 205 enters waiting queue at 402.00 minutes into shift.
+Customer support concluded for customer 146 at 403.34 minutes into shift.
+Customer 146 left call at 403.34 minutes into shift.
+Customer 147 enters call at 403.34 minutes into shift.
+Customer 206 enters waiting queue at 404.00 minutes into shift.
+Customer support concluded for customer 147 at 404.34 minutes into shift.
+Customer 147 left call at 404.34 minutes into shift.
+Customer 148 enters call at 404.34 minutes into shift.
+Customer support concluded for customer 144 at 404.42 minutes into shift.
+Customer 144 left call at 404.42 minutes into shift.
+Customer 149 enters call at 404.42 minutes into shift.
+Customer support concluded for customer 149 at 405.42 minutes into shift.
+Customer 149 left call at 405.42 minutes into shift.
+Customer 150 enters call at 405.42 minutes into shift.
+Customer support concluded for customer 150 at 406.42 minutes into shift.
+Customer 150 left call at 406.42 minutes into shift.
+Customer 151 enters call at 406.42 minutes into shift.
+Customer 207 enters waiting queue at 407.00 minutes into shift.
+Customer 208 enters waiting queue at 409.00 minutes into shift.
+Customer support concluded for customer 151 at 409.72 minutes into shift.
+Customer 151 left call at 409.72 minutes into shift.
+Customer 152 enters call at 409.72 minutes into shift.
+Customer 209 enters waiting queue at 410.00 minutes into shift.
+Customer support concluded for customer 152 at 410.72 minutes into shift.
+Customer 152 left call at 410.72 minutes into shift.
+Customer 153 enters call at 410.72 minutes into shift.
+Customer support concluded for customer 148 at 412.36 minutes into shift.
+Customer 148 left call at 412.36 minutes into shift.
+Customer 154 enters call at 412.36 minutes into shift.
+Customer 210 enters waiting queue at 413.00 minutes into shift.
+Customer 211 enters waiting queue at 414.00 minutes into shift.
+Customer 212 enters waiting queue at 415.00 minutes into shift.
+Customer 213 enters waiting queue at 416.00 minutes into shift.
+Customer support concluded for customer 154 at 417.87 minutes into shift.
+Customer 154 left call at 417.87 minutes into shift.
+Customer 155 enters call at 417.87 minutes into shift.
+Customer 214 enters waiting queue at 418.00 minutes into shift.
+Customer support concluded for customer 153 at 418.11 minutes into shift.
+Customer 153 left call at 418.11 minutes into shift.
+Customer 156 enters call at 418.11 minutes into shift.
+Customer support concluded for customer 155 at 418.87 minutes into shift.
+Customer 155 left call at 418.87 minutes into shift.
+Customer 157 enters call at 418.87 minutes into shift.
+Customer support concluded for customer 156 at 419.11 minutes into shift.
+Customer 156 left call at 419.11 minutes into shift.
+Customer 158 enters call at 419.11 minutes into shift.
+Customer 215 enters waiting queue at 421.00 minutes into shift.
+Customer 216 enters waiting queue at 422.00 minutes into shift.
+Customer support concluded for customer 157 at 422.20 minutes into shift.
+Customer 157 left call at 422.20 minutes into shift.
+Customer 159 enters call at 422.20 minutes into shift.
+Customer 217 enters waiting queue at 423.00 minutes into shift.
+Customer support concluded for customer 158 at 423.57 minutes into shift.
+Customer 158 left call at 423.57 minutes into shift.
+Customer 160 enters call at 423.57 minutes into shift.
+Customer support concluded for customer 160 at 424.57 minutes into shift.
+Customer 160 left call at 424.57 minutes into shift.
+Customer 161 enters call at 424.57 minutes into shift.
+Customer 218 enters waiting queue at 425.00 minutes into shift.
+Customer support concluded for customer 161 at 425.57 minutes into shift.
+Customer 161 left call at 425.57 minutes into shift.
+Customer 162 enters call at 425.57 minutes into shift.
+Customer 219 enters waiting queue at 426.00 minutes into shift.
+Customer support concluded for customer 162 at 428.54 minutes into shift.
+Customer 162 left call at 428.54 minutes into shift.
+Customer 163 enters call at 428.54 minutes into shift.
+Customer 220 enters waiting queue at 429.00 minutes into shift.
+Customer 221 enters waiting queue at 430.00 minutes into shift.
+Customer support concluded for customer 163 at 430.64 minutes into shift.
+Customer 163 left call at 430.64 minutes into shift.
+Customer 164 enters call at 430.64 minutes into shift.
+Customer support concluded for customer 159 at 432.45 minutes into shift.
+Customer 159 left call at 432.45 minutes into shift.
+Customer 165 enters call at 432.45 minutes into shift.
+Customer 222 enters waiting queue at 433.00 minutes into shift.
+Number of customers supported: 163.
+Number of customers unsupported: 222.
