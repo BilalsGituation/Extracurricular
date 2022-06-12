@@ -15,6 +15,8 @@ END_T = 435 # 120 in the tutorial but 2-hour shifts unrealistic, no?
 
 n_supported = 0 # i don't want to write my vars in caps, lesson learned
 n_waiting = 0
+total_supported = 0
+left_waiting = 0
 
 class CallCentre:
 
@@ -54,81 +56,39 @@ def setup(env, staff, duration, interval):
             env.process(customer(env, i, call_centre))
 
 #unsupported = n_waiting - n_supported
-
-print("Starting sim of shift at call centre")
-env = simpy.Environment()
-env.process(setup(env, NUM_EMPLOYEES, MEAN_SUPPORT, BETWEEN_CUSTOMERS))
+for i in range(100):
+    n_supported=0
+    n_waiting=0
+    print(f"Starting sim {i} of shift at call centre")
+    env = simpy.Environment()
+    env.process(setup(env, NUM_EMPLOYEES, MEAN_SUPPORT, BETWEEN_CUSTOMERS))
 #print(f"Number of unsupported customers in queue: {name - n_supported}.")
 #print(f"Number of customers mid-call: {name - n_supported}.")
-env.run(until=END_T)
-print(f"Number of customers supported: {n_supported}.")
-print(f"Number of customers unsupported: {n_waiting}.")
+    env.run(until=END_T)
+    print(f"Number of customers supported in shift {i}: {n_supported}.")
+    print(f"Number of customers unsupported in shift {i}: {n_waiting}.")
+    total_supported = total_supported + n_supported
+    print(f"Cumulative total customers supported (Day {i}): {total_supported}.")
+    left_waiting = left_waiting + n_waiting
+    print(f"Cumulative total customers whose issues were not resolved on day of call (Day {i}): {left_waiting}.")
 
 
+# actually I wanted to run it a proper amount of times (see changes since last commit)
 '''
-Terminal:
-python BasicCallCentre_sim.py > ./CallCentre_output.txt
-tail CallCentre_output.txt
+Terminal: (... write file, paths...) Extracurricular/Simulations$ tail CallCentre_output.txt
 
-CONDS 1:
-NUM_EMPLOYEES=2
-MEAN_SUPPORT=5
-BETWEEN_CUSTOMERS=2
-END_T = 435
+Customer 224 enters call at 433.00 minutes into shift.
+Customer 223 left call at 433.00 minutes into shift.
+Customer 225 enters waiting queue at 434.00 minutes into shift.
+Customer support concluded for customer 224 at 434.00 minutes into shift.
+Customer 225 enters call at 434.00 minutes into shift.
+Customer 224 left call at 434.00 minutes into shift.
+Number of customers supported in shift 99: 222.
+Number of customers unsupported in shift 99: 3.
+Cumulative total customers supported (Day 99): 21523.
+Cumulative total customers whose issues were not resolved on day of call (Day 99): 240.
 
-CONDS 1 RUN 1:
-Number of customers supported: 159.
-Number of customers unsupported: 218.
-
-CONDS 1 RUN 2:
-Number of customers supported: 165.
-Number of customers unsupported: 217.
-
-
-CONDS 1 RUN 3:
-Number of customers supported: 163.
-Number of customers unsupported: 222.
-# '''
-# Looks like this call centre wouldn't be very highly regarded as is. Now that we
-# know some basics, let's just change some conditions to play around with this and
-# move on, as I would like an efficient way to run a sim many times and get summary
-# stats, rather than optimise this much more
-'''
-Since the two employees were organised, they were able to persuade the employer to
-hire more staff, rather than require the employees to work at a rate that would support
-more than twice the amount of customers in a shift.
-So, the HR department successfully completed their task of recruiting more employees to
-work at the same rate for the same pay, and their workspaces had been prepared in the meantime...
-
-EDIT: aaaHH it's not so bad. we needed to remove one from n_waiting variable
-        each time customer support is completed
-
-CONDS 2:
-NUM_EMPLOYEES=7 # changing some names to show I didn't paste this from somewhere
-MEAN_SUPPORT=5
-BETWEEN_CUSTOMERS=2
-END_T = 435
-
-CONDS 2 RUN (SCRAP):
-Number of customers supported: 211.
-Number of customers unsupported: 213.
-
-CONDS 2 RUN 1 (edit made, n_waiting var corrected):
-Number of customers supported: 219.
-Number of customers unsupported: 2.
-
-CONDS 2 RUN 2:
-Number of customers supported: 204.
-Number of customers unsupported: 3.
-
-
-CONDS 2 RUN 3:
-Number of customers supported: 213.
-Number of customers unsupported: 2.
-
-Having lots of happy employees to split the work between meant that the call
-centre could better support its customer base. The company was happy with the outcome
-and allowed the employees to keep the extra time they gained from practicing their jobs,
-rather than grow the company, so that this git user could get on with more interesting
-simulation projects instead of exhausting this simple model.
+Looks like we get roughly 99% of calls resolved on the same day. That should be ok for a while,
+but after doing what they can for a year or so, the call centre may get a backlog. Let's see whether
+the discrepancy remains in the order of 100:1 resolved:unresolved...
 '''
