@@ -60,7 +60,7 @@ sample_supported = []
 sample_unsupported = []
 
 #unsupported = n_waiting - n_supported
-for i in range(1000):
+for i in range(100):
     n_supported=0
     n_waiting=0
     print(f"Starting sim {i+1} of shift at call centre")
