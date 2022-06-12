@@ -39,6 +39,7 @@ def customer(env, name, call_centre):
         yield env.process(call_centre.support(name))
         print(f"Customer {name} left call at {env.now:.2f} minutes into shift.")
         n_supported+=1
+        n_waiting-=1
 
 
 def setup(env, staff, duration, interval):
@@ -99,17 +100,35 @@ more than twice the amount of customers in a shift.
 So, the HR department successfully completed their task of recruiting more employees to
 work at the same rate for the same pay, and their workspaces had been prepared in the meantime...
 
+EDIT: aaaHH it's not so bad. we needed to remove one from n_waiting variable
+        each time customer support is completed
+
 CONDS 2:
 NUM_EMPLOYEES=7 # changing some names to show I didn't paste this from somewhere
 MEAN_SUPPORT=5
 BETWEEN_CUSTOMERS=2
 END_T = 435
 
-CONDS 2 RUN 1:
+CONDS 2 RUN (SCRAP):
+Number of customers supported: 211.
+Number of customers unsupported: 213.
 
+CONDS 2 RUN 1 (edit made, n_waiting var corrected):
+Number of customers supported: 219.
+Number of customers unsupported: 2.
 
-CONDS 2 RUN 2
+CONDS 2 RUN 2:
+Number of customers supported: 204.
+Number of customers unsupported: 3.
 
 
 CONDS 2 RUN 3:
+Number of customers supported: 213.
+Number of customers unsupported: 2.
+
+Having lots of happy employees to split the work between meant that the call
+centre could better support its customer base. The company was happy with the outcome
+and allowed the employees to keep the extra time they gained from practicing their jobs,
+rather than grow the company, so that this git user could get on with more interesting
+simulation projects instead of exhausting this simple model.
 '''
