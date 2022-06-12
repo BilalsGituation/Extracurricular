@@ -59,18 +59,18 @@ def setup(env, staff, duration, interval):
 for i in range(100):
     n_supported=0
     n_waiting=0
-    print(f"Starting sim {i} of shift at call centre")
+    print(f"Starting sim {i+1} of shift at call centre")
     env = simpy.Environment()
     env.process(setup(env, NUM_EMPLOYEES, MEAN_SUPPORT, BETWEEN_CUSTOMERS))
 #print(f"Number of unsupported customers in queue: {name - n_supported}.")
 #print(f"Number of customers mid-call: {name - n_supported}.")
     env.run(until=END_T)
-    print(f"Number of customers supported in shift {i}: {n_supported}.")
-    print(f"Number of customers unsupported in shift {i}: {n_waiting}.")
+    print(f"Number of customers supported in shift {i + 1}: {n_supported}.")
+    print(f"Number of customers unsupported in shift {i + 1}: {n_waiting}.")
     total_supported = total_supported + n_supported
-    print(f"Cumulative total customers supported (Day {i}): {total_supported}.")
+    print(f"Cumulative total customers supported (Day {i + 1}): {total_supported}.")
     left_waiting = left_waiting + n_waiting
-    print(f"Cumulative total customers whose issues were not resolved on day of call (Day {i}): {left_waiting}.")
+    print(f"Cumulative total customers whose issues were not resolved on day of call (Day {i+1}): {left_waiting}.")
 
 
 # actually I wanted to run it a proper amount of times (see changes since last commit)
