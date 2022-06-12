@@ -37,7 +37,9 @@ class CallCentre:
         print(f"Customer support concluded for customer {customer} at {self.env.now:.2f} minutes into shift.")
 
 
-# The function that happens
+# The function that happens (while I would love to leave it here...)
+# and causes generation of customer, to go through the phone interaction
+# in setup function
 def customer(env, name, call_centre):
     global n_supported, n_waiting
     n_waiting+=1
