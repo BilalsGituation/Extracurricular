@@ -7,7 +7,7 @@ import random
 import numpy as np
 import simpy
 
-NUM_EMPLOYEES=2 # changing some names to show I didn't paste this from somewhere
+NUM_EMPLOYEES=7 # changing some names to show I didn't paste this from somewhere
 MEAN_SUPPORT=5
 BETWEEN_CUSTOMERS=2
 END_T = 435 # 120 in the tutorial but 2-hour shifts unrealistic, no?
@@ -65,10 +65,12 @@ print(f"Number of customers unsupported: {n_waiting}.")
 
 
 '''
-Terminal: python BasicCallCentre_sim.py > ./CallCentre_output.txt
+Terminal:
+python BasicCallCentre_sim.py > ./CallCentre_output.txt
+tail CallCentre_output.txt
 
 CONDS 1:
-NUM_EMPLOYEES=2 # changing some names to show I didn't paste this from somewhere
+NUM_EMPLOYEES=2
 MEAN_SUPPORT=5
 BETWEEN_CUSTOMERS=2
 END_T = 435
@@ -90,3 +92,24 @@ Number of customers unsupported: 222.
 # know some basics, let's just change some conditions to play around with this and
 # move on, as I would like an efficient way to run a sim many times and get summary
 # stats, rather than optimise this much more
+'''
+Since the two employees were organised, they were able to persuade the employer to
+hire more staff, rather than require the employees to work at a rate that would support
+more than twice the amount of customers in a shift.
+So, the HR department successfully completed their task of recruiting more employees to
+work at the same rate for the same pay, and their workspaces had been prepared in the meantime...
+
+CONDS 2:
+NUM_EMPLOYEES=7 # changing some names to show I didn't paste this from somewhere
+MEAN_SUPPORT=5
+BETWEEN_CUSTOMERS=2
+END_T = 435
+
+CONDS 2 RUN 1:
+
+
+CONDS 2 RUN 2
+
+
+CONDS 2 RUN 3:
+'''
