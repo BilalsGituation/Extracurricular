@@ -7,6 +7,10 @@
 # I then changed it to generate a story about singing birds queuing to wake
 # me in the morning (with a capacity of 5 birds singing simultaneously)
 
+'''
+Credit to GitHub@fitosky1 for starting the line of joking that led to this script!
+'''
+
 import random
 import numpy as np
 import simpy
@@ -47,10 +51,16 @@ class TreeNearWindow:
 def bird(env, name, nearby_tree):
     global n_finished_song, n_waiting
     n_waiting+=1
-    print(f"Bird {name} sits on tree perch at 4:{env.now:.2f}AM.\n")
+    if env.now > 10:
+        print(f"Bird {name} sits on tree perch at 4:{env.now:.2f}AM.\n")
+    else:
+        print(f"Bird {name} sits on tree perch at {env.now:.2f} minutes after 4:00AM.\n")
     with nearby_tree.staff.request() as request:
         yield request
-        print(f"Bird {name} starts singing at 4:{env.now:.2f}.\n")
+        if env.now > 10:
+            print(f"Bird {name} starts singing at 4:{env.now:.2f}.\n")
+        else:
+            print(f"Bird {name} starts singing at {env.now:.2f} minutes after 4:00AM.\n")
         yield env.process(nearby_tree.song(name))
         #print(f"Customer {name} left call at {env.now:.2f} minutes into shift.\n")
         n_finished_song+=1
