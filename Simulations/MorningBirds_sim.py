@@ -33,11 +33,13 @@ class TreeNearWindow:
         self.staff = simpy.Resource(env,perch) # employee is a simulation resource
         self.duration = duration # call duration is called in downstream function
 
-    def support(self, bird):
+    def song(self, bird):
         random_time = max(1, np.random.normal(self.duration, 4))
         yield self.env.timeout(random_time) # generator
-        print(f"Bird {bird} finished singing at 4:{self.env.now:.2f}AM, flew off somewhere.\n")
-
+        if self.env.now > 10:
+            print(f"Bird {bird} finished singing at 4:{self.env.now:.2f}AM, flew off somewhere.\n")
+        else:
+            print(f"Bird {bird} finished singing at {self.env.now:.2f} minutes after 4:00AM, flew off somewhere.\n")
 
 # The function that happens (while I would love to leave it here...)
 # and causes generation of customer, to go through the phone interaction
@@ -49,7 +51,7 @@ def bird(env, name, nearby_tree):
     with nearby_tree.staff.request() as request:
         yield request
         print(f"Bird {name} starts singing at 4:{env.now:.2f}.\n")
-        yield env.process(nearby_tree.support(name))
+        yield env.process(nearby_tree.song(name))
         #print(f"Customer {name} left call at {env.now:.2f} minutes into shift.\n")
         n_finished_song+=1
         n_waiting-=1
@@ -76,7 +78,7 @@ for i in range(50):
     # counters for customer state at end of day
     n_finished_song=0
     n_waiting=0
-    print(f"Starting sim {i+1} of shift at call centre\n")
+    print(f"IT IS 4AM (Day {i+1})\n")
     #run the simulation once
     env = simpy.Environment()
     env.process(setup(env, Songbird_capacity, MEAN_SING, BETWEEN_BIRDS))
