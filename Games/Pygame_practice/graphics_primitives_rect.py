@@ -17,6 +17,8 @@ bg = GREY
 
 key_dict = {K_k: BLACK,K_r:RED, K_g: GREEN, K_b: BLUE, K_y:YELLOW, K_c: CYAN, K_m:MAGENTA,K_e:GREY, K_w:WHITE}
 
+colour_list = [BLACK,CYAN,GREEN,GREY,MAGENTA,RED,WHITE,YELLOW]
+
 start = (0, 0)
 size = (0, 0)
 drawing = False
@@ -24,6 +26,7 @@ drawing = False
 pygame.init()
 screen = pygame.display.set_mode((640,240))
 running = True
+rect_list = []
 while running:
     for event in pygame.event.get():
         if event.type == QUIT:
@@ -41,11 +44,22 @@ while running:
             end = event.pos
             size = end[0] - start[0], end[1] - start[1]
             drawing = False
+            rect = pygame.Rect(start, size)
+            rect_list.append(rect)
         elif event.type == MOUSEMOTION and drawing:
             end = event.pos
             size = end[0] - start[0], end[1] - start[1]
     screen.fill(bg)
-    pygame.draw.rect(screen, RED, (start, size), 2)
+    col_ind = 0
+    for rect in rect_list:
+        if col_ind < len(colour_list)-1:
+            col_ind+=1
+        else:
+            col_ind=0
+        colour = colour_list[col_ind]
+        pygame.draw.rect(screen, colour, rect, 3)
+
+    pygame.draw.rect(screen, BLUE, (start, size), 1)
     pygame.display.update()
 
 pygame.quit()

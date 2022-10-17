@@ -32,6 +32,9 @@ while running:
                 bg = key_dict[event.key]
                 caption = f'{bg=}'
                 pygame.display.set_caption(caption)
+            elif event.key == K_ESCAPE:
+                if len(points) > 0:
+                    points.pop()
         elif event.type == MOUSEBUTTONDOWN:
             points.append(event.pos)
             drawing = True
