@@ -8,6 +8,10 @@ If Python and Arcade are installed, this example can be run from the command lin
 python -m arcade.examples.drawing_with_loops
 """
 
+#Developed using:
+# https://api.arcade.academy/en/2.6.1/examples/drawing_with_loops.html#drawing-with-loops
+# as jump-off point. You can see what existed in the template already.
+
 # Library imports
 import arcade
 import random
@@ -19,7 +23,7 @@ SCREEN_TITLE = "Drawing With Loops Example"
 
 def draw_background():
     """
-    This function draws the background. Specifically, the sky and ground.
+    This function draws the background. Specifically, the sky and ground. (old, describes original)
     """
     # Draw the sky in the top two-thirds
     arcade.draw_rectangle_filled(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 2 / 3,
@@ -46,27 +50,36 @@ def draw_background():
                                  SCREEN_WIDTH - 1, SCREEN_HEIGHT / 2.3 ,
                                  (32, 105, 59))
 
+
 def draw_sun(x=SCREEN_WIDTH-680,y=SCREEN_HEIGHT-120):
     x,y = random.randint(0,SCREEN_WIDTH-550),random.randint(SCREEN_HEIGHT-220,SCREEN_HEIGHT-50)
     #arcade.draw_circle_filled(x, y, 68, arcade.color.YELLOW)
+    # If sun x value too high, its y value not too low
     if x > SCREEN_WIDTH-600:
         y= random.randint(SCREEN_HEIGHT-140,SCREEN_HEIGHT-50)
+    # If sun y too high, get normal mid-daytime colours, 
+    # remove inappropriate "rays of light", using overwriting rectangle  
     if y >SCREEN_HEIGHT- 100:
         arcade.draw_rectangle_filled(SCREEN_WIDTH / 2, SCREEN_HEIGHT * 2 / 3,
                                  SCREEN_WIDTH - 1, SCREEN_HEIGHT * 2 / 3,
-                                 (random.randint(55,156),random.randint(200,232),random.randint(220,255)))
+                                 (random.randint(55,156),
+                                    random.randint(200,232),
+                                    random.randint(220,255)))
         arcade.draw_circle_filled(x, y, 68, arcade.color.YELLOW)
     else:
         arcade.draw_circle_filled(x, y, 68, arcade.color.YELLOW)
 
-
+# Uses RNGs for type, positioning, relative size and colour
+# (Uncomment the text in, to get the clouds labelled, for modification
+# Turn different components contrasting colour if you have trouble
+# finding them)
 def draw_cloud(x,y):
     seed=random.randint(0,3)
 
     def cloud_1():
         size=random.randint(24,39)
-        r=random.randint(220,235)
-        g=random.randint(220,235)
+        r=random.randint(220,230)
+        g=random.randint(220,230)
         b=random.randint(220,235)
         arcade.draw_circle_filled(x-size*.1, y, size, (r,g,b))
         arcade.draw_circle_filled(x+size*.7, y, size*(2/3), (r,g,b))
@@ -78,9 +91,9 @@ def draw_cloud(x,y):
     def cloud_2():
 
         size=random.randint(18,28)
-        r=random.randint(220,255)
-        g=random.randint(220,255)
-        b=random.randint(220,255)
+        r=random.randint(220,230)
+        g=random.randint(220,235)
+        b=random.randint(220,240)
         arcade.draw_circle_filled(x+2, y, size, (r,g,b))
         arcade.draw_circle_filled(x+size*1.1, y-(size/4), size/2, (r,g,b))
         arcade.draw_ellipse_filled(x,y-2,size*1.8,size,(r,g,b))
@@ -90,9 +103,9 @@ def draw_cloud(x,y):
 
     def cloud_3():
         size=random.randint(8,19)
-        r=random.randint(220,255)
-        g=random.randint(220,255)
-        b=random.randint(220,255)
+        r=random.randint(220,245)
+        g=random.randint(220,235)
+        b=random.randint(220,240)
         arcade.draw_circle_filled(x-1, y, size, (r,g,b))
         #arcade.draw_text("3", x, y, arcade.color.BLACK, 12)
 
@@ -120,10 +133,11 @@ def draw_bird(x, y):
     arcade.draw_arc_outline(x, y, 20, 20, arcade.color.BLACK, 0, 90)
     arcade.draw_arc_outline(x+20, y, 20, 20, arcade.color.BLACK, 90, 180)
 
-
+# Uses RNGs for type and relative size. 
+# For loop in main() uses RNGs for positioning
 def draw_pine_tree(center_x, center_y):
     """
-    This function draws a pine tree at the specified location.
+    This function draws a pine tree at the specified location. (nope, updated this out)
 
     Args:
       :center_x: x position of the tree center.
@@ -198,6 +212,7 @@ def draw_pine_tree(center_x, center_y):
         arcade.draw_polygon_outline(point_list, (0,0,0,40),1)
 
 
+# Tree type likelihood is 2,3or5/13
     if seed == 0 or seed == 7 or seed == 9:
         tree_1()
     elif seed ==1 or seed ==3:
@@ -206,6 +221,7 @@ def draw_pine_tree(center_x, center_y):
         tree_3()
     elif seed == 6 or seed ==8 or seed == 10:
         tree_4()
+    # edit seed range and you can get the for loop to also deposit spaces
     else:
         pass
 
@@ -249,7 +265,7 @@ def main():
         draw_pine_tree((x+random.choice([-(x*2),-(x*2),(x*-2),(x*-2),0,0,10,0,0,0,0,10])), (random.randint((SCREEN_HEIGHT / 3),(SCREEN_HEIGHT/3)+10)-30))
 
     for x in range(50, SCREEN_WIDTH, 70):
-        draw_pine_tree((x+random.choice([-(x*2),-(x*2),(x*-2),(x*-2),0,0,10,0,0,0,0,10])), (random.randint((SCREEN_HEIGHT / 3),(SCREEN_HEIGHT/3))-50))
+        draw_pine_tree((x+random.choice([-(x*2),-(x*2),(x*-2),(x*-2),0,0,10,0,0,0,0,10])), (random.randint((SCREEN_HEIGHT / 3)-50,(SCREEN_HEIGHT/3))-80))
 
     # Draw the bottom row of trees
     for x in range(65, SCREEN_WIDTH, 50):
