@@ -243,8 +243,8 @@ def main():
     # Call our drawing functions.
     draw_background()
     draw_sun()
-    for cloud_count in range(1,random.randint(2,19)):
-        draw_cloud(random.randint(0,SCREEN_WIDTH),random.randint(SCREEN_HEIGHT-200,SCREEN_HEIGHT))
+    for cloud_count in range(1,random.randint(2,40)):
+        draw_cloud(random.randint(0,SCREEN_WIDTH),random.randint(SCREEN_HEIGHT-200,SCREEN_HEIGHT-50))
     # Loop to draw ten birds in random locations.
     for bird_count in range(10):
         # Any random x from 0 to the width of the screen
@@ -259,7 +259,7 @@ def main():
 
     # Draw the top row of trees
     for x in range(45, SCREEN_WIDTH, 60):
-        draw_pine_tree((x+random.choice([-(x*2),-(x*2),-(x/2),-(x*1.8),0,0,0,0,0,0,0,0,0,0])), (random.randint((SCREEN_HEIGHT / 3)-10,(SCREEN_HEIGHT/3)+10)+20))
+        draw_pine_tree((x+random.choice([-(x*2),-(x*2),-(x/2),-(x*1.8),0,0,0,0,0,0,0,0,0,0])), (random.randint((SCREEN_HEIGHT / 3)-10,(SCREEN_HEIGHT/3)+10)))
 
     for x in range(50, SCREEN_WIDTH, 70):
         draw_pine_tree((x+random.choice([-(x*2),-(x*2),(x*-2),(x*-2),0,0,10,0,0,0,0,10])), (random.randint((SCREEN_HEIGHT / 3),(SCREEN_HEIGHT/3)+10)-30))
