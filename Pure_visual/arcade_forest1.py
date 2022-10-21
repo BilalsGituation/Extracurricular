@@ -4,7 +4,9 @@ Example "Arcade" library code.
 This example shows how to use functions and loops to draw a scene.
 It does not assume that the programmer knows how to use classes yet.
 
-
+If Python and Arcade are installed, the template I expanded to create this 
+can be run from the command line with:
+python -m arcade.examples.drawing_with_loops
 """
 
 #Developed using:
