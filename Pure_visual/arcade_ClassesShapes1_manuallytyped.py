@@ -1,5 +1,5 @@
 '''
-Pseudocode:
+# Pseudocode:
 
 import arcade, random and timeit
 
